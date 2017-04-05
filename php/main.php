@@ -22,14 +22,6 @@
         <li><a href="#section3">Family</a></li>
         <li><a href="#section3">Photos</a></li>
       </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
     </div> <!-- Cierra div de Menú -->
 
     <div class="col-lg-6 col-xs-12"> <!-- Abre div al costado del menu -->
