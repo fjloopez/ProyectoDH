@@ -28,4 +28,12 @@ footer {
   }
   .row.content {height: auto;} 
 }
-  
+
+@font-face {
+  font-family: Vikingn;
+  src: url(../fonts/vikingn.ttf);
+}
+
+* {
+  font-family: Vikingn;
+}
