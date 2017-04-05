@@ -14,7 +14,7 @@
 
 <div class="container-fluid"> <!-- Abre el container-fluid -->
   <div class="row content">
-    <div class="col-sm-3 sidenav">
+    <div class="col-lg-6 col-xs-12 sidenav">  <!--Abre div de Menú -->
       <h4>John's Blog</h4>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Home</a></li>
@@ -30,9 +30,9 @@
           </button>
         </span>
       </div>
-    </div>
+    </div> <!-- Cierra div de Menú -->
 
-    <div class="col-sm-9"> <!-- Abre div al costado del menu -->
+    <div class="col-lg-6 col-xs-12"> <!-- Abre div al costado del menu -->
         
     </div> <!-- Cierra div al costado del menu -->
   </div>
