@@ -15,7 +15,7 @@
 <div class="container-fluid"> <!-- Abre el container-fluid -->
   <div class="row content">
     <div class="col-lg-6 col-xs-12 sidenav">  <!--Abre div de Menú -->
-      <h4>John's Blog</h4>
+      <h4>Menú</h4>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Home</a></li>
         <li><a href="#section2">Friends</a></li>
