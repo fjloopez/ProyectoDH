@@ -15,21 +15,13 @@
 <div class="container-fluid"> <!-- Abre el container-fluid -->
   <div class="row content">
     <div class="col-lg-6 col-xs-12 sidenav">  <!--Abre div de Menú -->
-      <h4>John's Blog</h4>
+      <h4>League of no es copia</h4>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Home</a></li>
         <li><a href="#section2">Friends</a></li>
         <li><a href="#section3">Family</a></li>
         <li><a href="#section3">Photos</a></li>
       </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
     </div> <!-- Cierra div de Menú -->
 
     <div class="col-lg-6 col-xs-12"> <!-- Abre div al costado del menu -->
