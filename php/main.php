@@ -25,14 +25,14 @@
     </div> <!-- Cierra div de Menú -->
 
     <div class="col-lg-6 col-xs-12"> <!-- Abre div al costado del menu -->
-        
+        <img class="img-responsive mainCharacter" src="..\img\Personaje.png" alt="Main character">
     </div> <!-- Cierra div al costado del menu -->
   </div>
 </div> <!-- Cierra el container-fluid -->
-
 <footer class="container-fluid">
   <p>Footer Text</p>
 </footer>
+
 
 </body>
 </html>

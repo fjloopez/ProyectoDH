@@ -1,5 +1,15 @@
-/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+/* Permite el uso de fuente especifica */
+@font-face {
+  font-family: Vikingn;
+  src: url(../fonts/vikingn.ttf);
+}
 
+/* Setea funte para toda la pagina */
+* {
+  font-family: Vikingn;
+}
+
+/* contenedor general  */
 .row.content {
   height: 1500px;
   padding: 50px;
@@ -7,7 +17,7 @@
   background-color: lightblue;
 }
 
-/* Set gray background color and 100% height */
+/* Set gray background color and 250px height */
 .sidenav {
   background-color: #f1f1f1;
   height: 250px;
@@ -20,6 +30,9 @@ footer {
   padding: 15px;
 }
 
+
+
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
   .sidenav {
@@ -29,11 +42,3 @@ footer {
   .row.content {height: auto;} 
 }
 
-@font-face {
-  font-family: Vikingn;
-  src: url(../fonts/vikingn.ttf);
-}
-
-* {
-  font-family: Vikingn;
-}
