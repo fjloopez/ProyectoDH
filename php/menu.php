@@ -1,7 +1,11 @@
-<h4 class="menu">Menú</h4>
-<ul class="nav nav-pills nav-stacked">
-	<li class="active"><a href="#section1">Home</a></li>
-	<li><a href="#section2">Log in</a></li>
-	<li><a href="#section3">Register</a></li>
-	<li><a href="#section3">FAQs</a></li>
-</ul><br>
+<header>
+	<nav class="nav_menu">
+	<h2 class="menu">Menú</h2>
+		<ul class="list_menu">
+			<li><a href="main.php">Pagina Principal</a></li>
+			<li><a href="log_in.php">Iniciar sesión</a></li>
+			<li><a href="register.php">Registrate</a></li>
+			<li><a href="faq.php">Preguntas frecuentes</a></li>
+		</ul>
+	</nav>
+</header>

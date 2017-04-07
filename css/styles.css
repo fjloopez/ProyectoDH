@@ -1,44 +1,104 @@
-/* Permite el uso de fuente especifica */
 @font-face {
   font-family: Vikingn;
   src: url(../fonts/vikingn.ttf);
 }
 
-/* Setea funte para toda la pagina */
 * {
   font-family: Vikingn;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  
 }
 
-/* contenedor general  */
-.row.content {
-  height: 1500px;
-  padding: 50px;
-  border: 50px;
+.list_menu {
+  list-style: none;
+}
+
+body{
+  background-color: lightgreen;
+  width: 100%;
+}
+
+
+.container {
+  padding: 40px;
   background-color: lightblue;
+  overflow: hidden;
+  
 }
 
-/* Set gray background color and 250px height */
-.sidenav {
-  background-color: #f1f1f1;
-  height: 250px;
+
+/*====
+Logo
+================*/
+.container_logo{
+  text-align: center;
 }
 
-/* Set black background color, white text and some padding */
+.container_logo .img_logo {
+  width: 40%;
+}
+
+/*====
+Menu
+================*/
+.container_menu{
+  background-color: red;
+  width: 29%;
+  border: 2px solid black;
+  padding: 30px;
+  float: left;
+  height: 400px; /*refactor en prodcucción*/
+}
+
+.menu{
+  font-size: 40px;
+  line-height: 70px;
+}
+
+.list_menu li a{
+  font-style: none;
+  color: black;
+  font-size: 20px;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+/*====
+Imagen personaje
+================*/
+
+.container_img{
+  width: 69%;  
+  float: right;
+}
+
+.img_character {
+  width: 100%;
+  border-radius: 200px;  
+}
+
+
+
+/*====
+Slider
+================*/
+
+.slider {
+  height: 350px; /*refactor en prodcucción*/
+  background-color: #ccc;
+  clear: both;
+  margin-bottom: 30px;
+}
+
+
 footer {
   background-color: #555;
   color: white;
   padding: 15px;
+
 }
 
 
 
-
-/* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {height: auto;} 
-}
 
