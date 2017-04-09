@@ -52,9 +52,7 @@ Menu
   border: 2px solid black;
   padding: 30px;
   float: left;
-  height: 300px; /*refactor en producción*/
   margin-top: 15px;
-
 }
 
 .list_menu li a{
@@ -63,6 +61,14 @@ Menu
   font-size: 1.4vw;
   line-height: 4vw;
   text-decoration: none;
+}
+
+.list_menu li a:hover{
+  background-color: grey;
+}
+
+.list_menu li a:active {
+    color: yellow;
 }
 
 /*====
@@ -86,17 +92,29 @@ Slider
 ================*/
 
 .slider {
-  height: 350px; /*refactor en producción*/
-  background-color: #ccc;
+ 
+  background-color: #cc9;   /*borrar al poner las img originales*/
   clear: both;
   margin-bottom: 30px;
+  text-align: center;
 }
 
+.img_slider1{
+  max-width:100%;
+  max-height:100%;
+
+}
+
+
+/*====
+Footer
+================*/
 
 footer {
   background-color: #555;
   color: white;
   padding: 15px;
+  font-size: 1.4vw;
 
 }
 

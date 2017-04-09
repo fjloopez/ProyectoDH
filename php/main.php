@@ -28,9 +28,9 @@
       </div><!-- cierra container imagen -->
       
       <div class="slider">
-          
+          <img class="img_slider1" src="..\img\howdy.jpg">
       </div>
-      
+
       
       
         
