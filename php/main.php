@@ -22,7 +22,7 @@
       <div class="container_img"> <!-- abre container imagen -->
           <article>
             <section>
-              <img class="img_character" src="..\img\Personaje.png" alt="Main character">
+              <img class="img_character" src="..\img\Personajes.png" alt="Main character">
             </section>
           </article>
       </div><!-- cierra container imagen -->

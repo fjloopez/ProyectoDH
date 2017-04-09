@@ -1,2 +1,0 @@
-# ProyectoDH
-Proyecto final DH
