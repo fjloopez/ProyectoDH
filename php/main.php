@@ -19,7 +19,7 @@
           <?php include 'menu.php'; ?>
       </div><!-- cierra container menu -->
       
-      <div class="container_img"> <!-- abre container imagen -->
+      <div class="container_img_main"> <!-- abre container imagen -->
           <article>
             <section>
               <img class="img_character" src="..\img\Personajes.png" alt="Main character">

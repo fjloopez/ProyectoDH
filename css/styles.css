@@ -77,20 +77,21 @@ Menu
 Imagen personaje
 ================*/
 
-.container_img{
+/* En Home */
+.container_img_main{
   width: 69%;  
   float: right;
 }
 
 .img_character {
   width: 100%;
-<<<<<<< HEAD
-  /*border-radius: 50px;  */
-=======
-  
->>>>>>> b87e5a5195e71b55e0dd37089f37ba8bfb214c54
 }
 
+/* En FAQ */
+.container_img_faq{
+  width: 29%;  
+  float: left;
+}
 
 
 /*====
@@ -118,12 +119,50 @@ Footer
 
 footer {
   background-color: #555;
+  clear: both;
   color: white;
   padding: 1%;
   font-size: 1.4vw;
 
 }
 
+
+/*====
+FAQ
+================*/
+.container_faq{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;  
+  float: right;
+  margin-top: 15px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+}
+
+
+.container_faq a{
+  font-style: none;
+  color: white;
+  font-size: 1.4vw;
+  line-height: 4vw;
+  text-decoration: none;
+}
+
+
+.container_faq a h3:hover{
+  background-color: grey;
+}
+
+.container_faq div {
+    display: none;
+}
+
+.container_faq div:target {
+    display: block;
+}
 
 
 /*=============================================================
@@ -140,7 +179,7 @@ Mobile
     margin-top: 0px;
   }
 
-  .container_img{
+  .container_img_main{
     width: 100%;
   }
 
@@ -159,6 +198,31 @@ Mobile
   .slider{
     margin-bottom: 0px;
   }
+
+  .container_faq{
+    width: 100%;
+  }
+
+  .container_faq a h3{
+    font-size: 2vw;
+  }
+
+  .container_faq div {
+    display: block;
+  }
+
+  .container_faq div p{
+    font-size: 1.4vw;
+    line-height: 4vw;
+  }
+
+  .container_img_faq{
+    width: 100%;
+  }
+
+
+
+
 }
 
 
