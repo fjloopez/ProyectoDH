@@ -185,6 +185,10 @@ FAQ
     display: none;
 }
 
+.container_faq div p{
+  padding-left: 5%;
+}
+
 .container_faq div:target {
     display: block;
 }
