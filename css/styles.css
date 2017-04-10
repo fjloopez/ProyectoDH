@@ -7,8 +7,7 @@
   font-family: Vikingn;
   padding: 0;
   margin: 0;
-  box-sizing: border-box; 
-  
+  box-sizing: border-box;
 }
 
 .list_menu {
@@ -166,7 +165,6 @@ FAQ
   line-height: 4vw;
   border: 2px solid black;
   padding: 30px;
-  max-height: 100vh;
 }
 
 
