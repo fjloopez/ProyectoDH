@@ -33,8 +33,7 @@
 			 	</div>
 
 				<div class="container_form2">
-				    <button type="button" class="cancelbtn">Cancel</button>
-				    <span class="psw">Forgot <a href="#">password?</a></span>
+				    <span class="psw">¿Olvidaste tu <a href="#">Contraseña?</a></span>
 			    </div>
 			</form>
           
