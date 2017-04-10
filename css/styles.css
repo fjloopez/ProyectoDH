@@ -57,6 +57,14 @@ Menu
   margin-top: 15px;
 }
 
+.nav_menu .container_mm{
+  display: none;
+}
+
+.nav_menu .container_mh{
+  display: none;
+}
+
 .list_menu li a{
   font-style: none;
   color: white;
@@ -79,14 +87,31 @@ Imagen personaje
 ================*/
 
 /* En Home */
-.container_img_main{
+.container_play{
   width: 69%;  
   float: right;
+}
+
+.container_img_main{
+  position: relative;
+}
+
+.container_play_button{
+  background-color: red;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .img_character {
   width: 100%;
 }
+
+/* Animacion del boton play*/
+.container_img_main:hover .play_button{
+  opacity: 1;
+}
+
 
 /* En FAQ */
 .container_img_faq{
@@ -178,18 +203,42 @@ Mobile
   .container_menu{
     width: 100%;
     margin-top: 0px;
+    background-color: transparent;
   }
 
-  .container_img_main{
+
+  .nav_menu .list_menu{
+    display: none;
+  }
+
+  .nav_menu .container_mm{
+    width: 50%;
+    display: block;
+    float: left;
+  }
+
+  .nav_menu .container_mh{
+    width: 49%;
+    display: block;
+    float: right;
+    padding-left: 40%;
+    padding-top: 8%;
+    
+  }
+
+  .nav_menu .container_mh div{
+    width: 35px;
+    height: 5px;
+    background-color: #8e4300;
+    margin: 6px 0;
+  }
+
+  .img_logo_mm {
+    width: 150px;
+  }
+
+  .container_play{
     width: 100%;
-  }
-
-  .list_menu li a{
-    font-style: none;
-    color: white;
-    font-size: 1.4vw;
-    line-height: 4vw;
-    text-decoration: none;
   }
   
   .img_logo{ 
