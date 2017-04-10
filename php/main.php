@@ -12,7 +12,7 @@
     <div class='container'> <!-- abre container principal-->
       
       <div class="container_logo">
-          <img class="img_logo" src="..\img\vikings-sign.jpg" alt="Logo del juego">
+          <img class="img_logo" src="..\img\vikings-sign2.jpg" alt="Logo del juego">
       </div>
       
       <div class="container_menu"><!-- abre container imagen -->
@@ -28,8 +28,9 @@
       </div><!-- cierra container imagen -->
       
       <div class="slider">
-          
+          <img class="img_slider1" src="..\img\howdy.jpg">
       </div>
+
       
       
         

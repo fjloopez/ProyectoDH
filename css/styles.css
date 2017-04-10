@@ -7,7 +7,8 @@
   font-family: Vikingn;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box; 
+  
 }
 
 .list_menu {
@@ -24,6 +25,8 @@ body{
   padding: 40px;
   background-color: lightblue;
   overflow: hidden;
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
   
 }
 
@@ -37,7 +40,7 @@ Logo
 }
 
 .container_logo .img_logo {
-  width: 40%;
+  width: 30%;
 }
 
 
@@ -45,25 +48,29 @@ Logo
 Menu
 ================*/
 .container_menu{
-  background-color: red;
+  background-color: #564b41;
+  background-size: cover;
   width: 29%;
   border: 2px solid black;
   padding: 30px;
   float: left;
-  height: 300px; /*refactor en prodcucción*/
-}
-
-.menu{
-  font-size: 20px;
-  line-height: 70px;
+  margin-top: 15px;
 }
 
 .list_menu li a{
   font-style: none;
-  color: black;
-  font-size: 15px;
-  line-height: 50px;
+  color: white;
+  font-size: 1.4vw;
+  line-height: 4vw;
   text-decoration: none;
+}
+
+.list_menu li a:hover{
+  background-color: grey;
+}
+
+.list_menu li a:active {
+    color: yellow;
 }
 
 /*====
@@ -77,7 +84,11 @@ Imagen personaje
 
 .img_character {
   width: 100%;
+<<<<<<< HEAD
   /*border-radius: 50px;  */
+=======
+  
+>>>>>>> b87e5a5195e71b55e0dd37089f37ba8bfb214c54
 }
 
 
@@ -87,20 +98,67 @@ Slider
 ================*/
 
 .slider {
-  height: 350px; /*refactor en prodcucción*/
-  background-color: #ccc;
+ 
+  background-color: #cc9;   /*borrar al poner las img originales*/
   clear: both;
   margin-bottom: 30px;
+  text-align: center;
 }
 
+.img_slider1{
+  max-width:100%;
+  max-height:100%;
+
+}
+
+
+/*====
+Footer
+================*/
 
 footer {
   background-color: #555;
   color: white;
-  padding: 15px;
+  padding: 1%;
+  font-size: 1.4vw;
 
 }
 
 
+
+/*=============================================================
+Mobile
+==============================================================*/
+
+@media only screen and (max-width : 480px) {
+  .container{
+    padding: 5px;
+  }
+
+  .container_menu{
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .container_img{
+    width: 100%;
+  }
+
+  .list_menu li a{
+    font-style: none;
+    color: white;
+    font-size: 1.4vw;
+    line-height: 4vw;
+    text-decoration: none;
+  }
+  
+  .img_logo{ 
+    display: none;
+  }
+
+  .slider{
+    margin-bottom: 0px;
+  }
+}
 
 
