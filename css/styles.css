@@ -65,13 +65,14 @@ Menu
   text-decoration: none;
 }
 
-.list_menu li a:hover{
+.list_menu h4{
+  font-weight: normal;  
+}
+
+.list_menu a h4:hover{
   background-color: grey;
 }
 
-.list_menu li a:active {
-    color: yellow;
-}
 
 /*====
 Imagen personaje
