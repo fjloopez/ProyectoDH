@@ -125,7 +125,7 @@ Slider
 
 .slider {
  
-  background-color: #cc9;   /*borrar al poner las img originales*/
+  background-color: #564b41;   /*borrar al poner las img originales*/
   clear: both;
   margin-bottom: 30px;
   text-align: center;
@@ -227,9 +227,10 @@ Mobile
 
   .nav_menu .container_mh div{
     width: 35px;
-    height: 5px;
+    height: 6px;
     background-color: #8e4300;
     margin: 6px 0;
+    border: 1px solid black;
   }
 
   .img_logo_mm {
