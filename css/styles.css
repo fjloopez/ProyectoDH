@@ -168,6 +168,7 @@ FAQ
   width: 69%;  
   float: right;
   margin-top: 15px;
+  font-size: 1.4vw;
   line-height: 4vw;
   border: 2px solid black;
   padding: 30px;
@@ -242,12 +243,10 @@ button {
     width: 100%;
 }
 
-/* Add a hover effect for buttons */
 button:hover {
     opacity: 0.8;
 }
 
-/* Add padding to containers */
 .container_form {
     padding: 16px;
 }
@@ -256,7 +255,6 @@ button:hover {
   background-color:#f1f1f1
 }
 
-/* The "Forgot password" text */
 span.psw {
     float: right;
     padding-top: 16px;
