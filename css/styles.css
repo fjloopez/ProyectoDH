@@ -141,6 +141,7 @@ FAQ
   line-height: 4vw;
   border: 2px solid black;
   padding: 30px;
+  max-height: 100vh;
 }
 
 
