@@ -162,7 +162,7 @@ footer {
   clear: both;
   color: white;
   padding: 1%;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 footer p{
@@ -241,7 +241,7 @@ Log In
 }
 
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=date]  {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -299,7 +299,7 @@ Register
   font-size: 1.4vw;
 }
 
-.register input{
+.container_register input{
   font-size: 1vw;
 }
 
@@ -316,11 +316,16 @@ Mobile
     width: 100%;
     margin-top: 0px;
     background-color: transparent;
+    font-size: 3vw;
   }
 
 
-  .nav_menu .list_menu{
+  .container_desplegable .container_menu_list{
     display: none;
+  }
+
+  .container_desplegable div:target{
+    display: block;
   }
 
   .nav_menu .container_mm{
@@ -378,7 +383,7 @@ Mobile
   }
 
   .container_faq a h3{
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .container_faq div {
@@ -386,7 +391,7 @@ Mobile
   }
 
   .container_faq div p{
-    font-size: 1.4vw;
+    font-size: 2.5vw;
     line-height: 4vw;
   }
 
@@ -394,16 +399,22 @@ Mobile
     width: 100%;
   }
 
-  .container_img_login{
-    width: 100%;
-  }
-
   .container_login{
     width: 100%;
   }
 
+  .container_img_login{
+    width: 100%;
+  }
+
+  .container_login, .container_login button, input {
+    font-size: 3vw;
+    
+  }
+
   .container_register{
     width: 100%;
+    font-size: 3vw;
   }
 
 

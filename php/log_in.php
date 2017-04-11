@@ -22,10 +22,10 @@
           
 			<form class="form_login" action="/action_page.php">
 			  	<div class="container_form">
-				    <label><b>Usuario</b></label>
+				    <label>Usuario</label>
 				    <input type="text" placeholder="Nombre de usuario" name="uname" required>
 
-				    <label><b>Contraseña</b></label>
+				    <label>Contraseña</label>
 				    <input type="password" placeholder="Contraseña" name="psw" required>
 
 			    	<button type="submit">Login</button>

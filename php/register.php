@@ -59,7 +59,7 @@
 				<input type="radio" name="gender" value="other"> Prefiero no decirlo
 				<br>
 
-				<button aling="center" type="submit">Enviar</button>
+				<button align="center" type="submit">Enviar</button>
 				<button type="reset">Borrar</button>
 				
 			</form>
