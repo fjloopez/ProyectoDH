@@ -1,161 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html>a
 <head>
 	<link rel="stylesheet" type="text/css" href=".css">
 	<meta charset="utf-8">
 	<title>Formulario</title>
 </head>
 <body>
-	<h1 align="center">Registro</h1>
-	<br>
+	
 	<form action="script.php" method="post">
-		<label>Nombre</label>
+		<label>Nombre y Apellido</label>
 		<br>
 			<input type="text" name="firstname" placeholder="Nombre" required>
 			<input type="text" name="surname" placeholder="Apellido" required>
-		<br>
+		<br><br>
 
-		<label> Tu dirección de Correo Electrónico</label>
+		<label>Correo Electrónico </label>
 		<br>
-			<input type="email" name="correo" placeholder="Correo Electrónico" required>
-		<br>
+			<input type="email" name="email" placeholder="Correo Electrónico" required>
+		<br><br>
 
-		<label> Confirmá tu Correo</label>
+		<label> Confirmá tu Correo </label>
 		<br>
 			<input type="email" name="verificarcorreo" placeholder="Confirmar Correo" required>
-		<br>
+		<br><br>
 
-		<label> Creá tu Contraseña</label>
+		<label> Creá tu Contraseña </label>
 		<br>
 			<input type="password" name="contraseña" placeholder="Contraseña" required>
-		<br>
+		<br><br>
 
-		<label> Confirmá Contraseña</label>
+		<label> Confirmá Contraseña </label>
 		<br>
 			<input type="password" name="verificacioncontraseña" placeholder="Confirmar Contraseña" required>
-		<br>
-		<label> País</label>
-		<br>
-		<select name="país" id="país" required>
-			<option value="">Seleccionar País</option>
-			<option value="Ar">Argentina</option>
-			<option value="Br">Brasil</option>
-			<option value="Co">Colombia</option>
-			<option value="En">England</option>
-			<option value="EEUU">Estados Unidos</option>
-		</select>
-		<br>
+		<br><br>
 
-		<label> Fecha de Nacimiento</label>
+		
+		<label for="birth_date">Fecha de Nacimiento </label>
 		<br>
-		<select name="Día" required>
-			<option>Día</option>
-			<option>1</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-			<option>6</option>
-			<option>7</option>
-			<option>8</option>
-			<option>9</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
-			<option>13</option>
-			<option>14</option>
-			<option>15</option>
-			<option>16</option>
-			<option>17</option>
-			<option>18</option>
-			<option>19</option>
-			<option>20</option>
-			<option>21</option>
-			<option>22</option>
-			<option>23</option>
-			<option>24</option>
-			<option>25</option>
-			<option>26</option>
-			<option>27</option>
-			<option>28</option>
-			<option>29</option>
-			<option>30</option>
-			<option>31</option>
-
-		</select>
-		<select name="Mes" required>
-			<option>Mes</option>
-			<option>Enero</option>
-			<option>Febrero</option>
-			<option>Marzo</option>
-			<option>Abril</option>
-			<option>Mayo</option>
-			<option>Junio</option>
-			<option>Julio</option>
-			<option>Agosto</option>
-			<option>Septiembre</option>
-			<option>Octubre</option>
-			<option>Noviembre</option>
-			<option>Diciembre</option>
-		</select>
-		<select name="Año" required>
-			<option>Año</option>
-			<option>1999</option>
-			<option>1998</option>
-			<option>1997</option>
-			<option>1996</option>
-			<option>1995</option>
-			<option>1994</option>
-			<option>1993</option>
-			<option>1992</option>
-			<option>1991</option>
-			<option>1990</option>
-			<option>1989</option>
-			<option>1988</option>
-			<option>1987</option>
-			<option>1986</option>
-			<option>1985</option>
-			<option>1984</option>
-			<option>1983</option>
-			<option>1982</option>
-			<option>1981</option>
-			<option>1980</option>
-			<option>1979</option>
-		</select>
+		<input type="date" name="birth_date" placeholder="Fecha de Nacimiento">
+		<br>
 		<br>
 
 		<label> Género</label>
 		<br>
-		<select name="genero" required>
-			<option>Seleccionar</option>
-			<option>Mujer</option>
-			<option>Hombre</option>
-			<option>Otro</option>
-			<option>Prefiero no decirlo</option>
-		</select>
+		<input type="radio" name="gender" value="male" checked> Hombre<br>
+	  	<input type="radio" name="gender" value="female"> Mujer<br>
+	  	<input type="radio" name="gender" value="other"> Prefiero no decirlo
 		<br>
 		<br>
 
 		<button aling="center" type="submit">Enviar</button>
 		<button type="reset">Borrar</button>
 		<br>
-		<button type="button">Hacer la Encuesta!</button>
-
 		<br>
-		<br>
-
-
-
-		Los campos con (*) son Obligatorios
-
-
-
-
-
-
-
-
-
 
 	</form>
 

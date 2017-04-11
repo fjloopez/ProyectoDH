@@ -264,6 +264,28 @@ span.psw {
   color: lightblue;
 }
 
+
+/*====
+Register
+================*/
+
+.container_register{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;  
+  float: right;
+  margin-top: 15px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;
+}
+
+.register input{
+  font-size: 1vw;
+}
+
 /*=============================================================
 Mobile
 ==============================================================*/
@@ -349,6 +371,10 @@ Mobile
   }
 
   .container_login{
+    width: 100%;
+  }
+
+  .container_register{
     width: 100%;
   }
 
