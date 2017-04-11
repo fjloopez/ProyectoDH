@@ -2,7 +2,7 @@
 	<nav class="nav_menu">
 		<!-- mm = menu mobile -->
 		<div class="container_mm">
-			<img class="img_logo_mm" src="..\img\logoVA.png" alt="Logo del juego">
+			<img class="img_logo_mm" src="..\img\logoV.png" alt="Logo del juego">
 		</div>
 		<!-- mh = menu hamburguesa -->
 		<div class="container_mh">

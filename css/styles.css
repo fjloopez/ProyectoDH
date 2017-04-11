@@ -51,7 +51,7 @@ Menu
   background-size: cover;
   width: 29%;
   border: 2px solid black;
-  padding: 30px;
+  padding: 20px;
   float: left;
   margin-top: 15px;
 }
@@ -338,7 +338,7 @@ Mobile
   }
 
   .img_logo_mm {
-    width: 150px;
+    width: 50px;
   }
 
   .container_play{
