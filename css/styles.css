@@ -108,7 +108,7 @@ Imagen personaje
 }
 
 .play_button{
-  font-size: 1.4vw;
+  font-size: 3vw;
 }
 
 .img_character {
@@ -353,6 +353,17 @@ Mobile
   .container_play{
     width: 100%;
   }
+
+  .container_play_button{
+    opacity: 1;
+    position: relative;
+    width: 96%;
+    /*border: 2px black solid;*/
+    margin: 0;
+  }
+  /*
+  .play_button{
+  */
   
   .img_logo{ 
     display: none;
