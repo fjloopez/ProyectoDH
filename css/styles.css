@@ -15,7 +15,7 @@
 }
 
 body{
-  background-color: lightgreen;
+  
   width: 100%;
 }
 
@@ -96,10 +96,19 @@ Imagen personaje
 }
 
 .container_play_button{
-  background-color: red;
+  text-align: center;
+  width: 94.5%;
+  height: 15%;
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.play_button{
+  font-size: 1.4vw;
 }
 
 .img_character {
@@ -107,7 +116,7 @@ Imagen personaje
 }
 
 /* Animacion del boton play*/
-.container_img_main:hover .play_button{
+.container_img_main:hover .container_play_button{
   opacity: 1;
 }
 
