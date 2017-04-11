@@ -29,6 +29,15 @@ body{
   
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 1.4vw;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 1.4vw;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 1.4vw;
+}
 
 /*====
 Logo
@@ -300,7 +309,7 @@ Register
 }
 
 .container_register input{
-  font-size: 1vw;
+  font-size: 1.4vw;
 }
 
 /*=============================================================
@@ -409,7 +418,7 @@ Mobile
 
   .container_login, .container_login button, input {
     font-size: 3vw;
-    
+
   }
 
   .container_register{
@@ -417,6 +426,19 @@ Mobile
     font-size: 3vw;
   }
 
+  .container_register input{
+  font-size: 2.5vw;
+}
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 2.5vw;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 2.5vw;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 2.5vw;
+  }
 
 }
 
