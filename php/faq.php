@@ -70,11 +70,11 @@
 				<h3 class="question_four">¿Necesito bajarme algún archivo para jugar?</h3>
 			</a>
 
-	         <div class="container_answer_five" id="container_answer_five"> <!-- Abre Respuesta cuatro -->
+	         <div class="container_answer_five" id="container_answer_five"> <!-- Abre Respuesta cinco -->
 	          	<p class="answer_four">
 	          		No, el juego es 100% online. No hace falta bajar ningún archivo ya que se juega desde el navegador.
 	          	</p>
-	        </div> <!-- Cierra Respuesta cuatro -->
+	        </div> <!-- Cierra Respuesta cinco -->
           
       </div><!-- cierra container faq -->
 
