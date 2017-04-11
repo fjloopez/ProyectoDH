@@ -153,8 +153,16 @@ footer {
   clear: both;
   color: white;
   padding: 1%;
-  font-size: 1.4vw;
+  font-size: 10px;
+}
 
+footer p{
+  font-family: none;
+}
+
+footer a{
+  font-family: none;
+  color: lightblue;
 }
 
 
