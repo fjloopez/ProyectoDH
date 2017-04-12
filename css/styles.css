@@ -59,7 +59,7 @@ Menu
   background-color: #564b41;
   background-size: cover;
   width: 29%;
-  border: 2px solid black;
+  border: 2px solid #8e4300;
   padding: 20px;
   float: left;
   margin-top: 15px;
@@ -328,18 +328,20 @@ Mobile
     font-size: 3vw;
   }
 
-  .container_menu_list h4{
-    font-size: 2.5vw;
-  }
-
 
   .container_desplegable .container_menu_list{
+    clear: both;
     display: none;
   }
 
   .container_desplegable div:target{
     display: block;
   }
+
+  .list_menu li a{
+  font-size: 4.5vw;
+  line-height: 15vw;
+}
 
   .nav_menu .container_mm{
     width: 50%;
@@ -351,7 +353,7 @@ Mobile
     width: 49%;
     display: block;
     float: right;
-    padding-left: 40%;
+    padding-left: 30%;
     padding-top: 8%;
     
   }
@@ -359,9 +361,9 @@ Mobile
   .nav_menu .container_mh div{
     width: 35px;
     height: 6px;
-    background-color: #8e4300;
+    background-color: #e9d401;
     margin: 6px 0;
-    border: 1px solid black;
+    border: 1px solid #8e4300;
   }
 
   .img_logo_mm {
@@ -370,18 +372,23 @@ Mobile
 
   .container_play{
     width: 100%;
+    text-align: center;
   }
 
   .container_play_button{
     opacity: 1;
     position: relative;
-    width: 96%;
-    /*border: 2px black solid;*/
-    margin: 0;
+    width: 100%;
+    margin-bottom: 11px;
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
   }
-  /*
+  
   .play_button{
-  */
+    border:1px #e9d401 solid;
+    font-size: 5vw;
+  }
   
   .img_logo{ 
     display: none;
