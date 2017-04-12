@@ -10,7 +10,7 @@
 	<div class='container'> <!-- abre container principal-->
 
 		<div class="container_logo">
-			<img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego">
+			<a href="main.php"><img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego"></a> 
 		</div>
 
 		<div class="container_menu"><!-- abre container imagen -->
@@ -21,35 +21,30 @@
 		<div class="container_register"> <!-- abre container register -->
           
 			<form action="script.php" method="post" class="register">
-				<label>Nombre y Apellido</label>
+				<label for="nombreyapellido">Nombre y Apellido</label>
 				<br>
-				<input type="text" name="firstname" placeholder="Nombre" required>
+				<input type="text" name="firstname" placeholder="Nombre" required id="nombreyapellido">
 				<input type="text" name="surname" placeholder="Apellido" required>
 				<br>
 
-				<label>Correo Electrónico </label>
+				<label for="mail">Correo Electrónico </label>
 				<br>
-				<input type="email" name="email" placeholder="Correo Electrónico" required>
-				<br>
-
-				<label> Confirmá tu Correo </label>
-				<br>
-				<input type="email" name="verificarcorreo" placeholder="Confirmar Correo" required>
+				<input type="email" name="email" placeholder="Correo Electrónico" required id="mail">
 				<br>
 
-				<label> Creá tu Contraseña </label>
+				<label for="makepassword"> Creá tu Contraseña </label>
 				<br>
-				<input type="password" name="contraseña" placeholder="Contraseña" required>
+				<input type="password" name="contraseña" placeholder="Contraseña" required id="makepassword">
 				<br>
 
-				<label> Confirmá Contraseña </label>
+				<label for="checkpassword"> Confirmá Contraseña </label>
 				<br>
-				<input type="password" name="verificacioncontraseña" placeholder="Confirmar Contraseña" required>
+				<input type="password" name="verificacioncontraseña" placeholder="Confirmar Contraseña" required id="checkpassword">
 				<br>
 
 				<label for="birth_date">Fecha de Nacimiento </label>
 				<br>
-				<input type="date" name="birth_date" placeholder="Fecha de Nacimiento">
+				<input type="date" name="birth_date" placeholder="Fecha de Nacimiento" required>
 				<br>
 
 				<label> Género</label>

@@ -10,7 +10,7 @@
 	<div class='container'> <!-- abre container principal-->
 
 		<div class="container_logo">
-			<img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego">
+			<a href="main.php"><img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego"></a> 
 		</div>
 
 		<div class="container_menu"><!-- abre container imagen -->

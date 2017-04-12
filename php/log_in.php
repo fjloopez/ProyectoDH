@@ -10,8 +10,7 @@
 	<div class='container'> <!-- abre container principal-->
 
 		<div class="container_logo">
-			<img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego">
-		</div>
+			<a href="main.php"><img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego"></a> 		</div>
 
 		<div class="container_menu"><!-- abre container imagen -->
 			<?php include 'menu.php'; ?>
@@ -22,11 +21,11 @@
           
 			<form class="form_login" action="/action_page.php">
 			  	<div class="container_form">
-				    <label>Usuario</label>
-				    <input type="text" placeholder="Nombre de usuario" name="uname" required>
+				    <label for="nameuser">Usuario</label>
+				    <input type="text" placeholder="Nombre de usuario" name="uname" required id="nameuser">
 
-				    <label>Contraseña</label>
-				    <input type="password" placeholder="Contraseña" name="psw" required>
+				    <label for="userpassword">Contraseña</label>
+				    <input type="password" placeholder="Contraseña" name="psw" required id="userpassword">
 
 			    	<button type="submit">Login</button>
 			  		<input type="checkbox" checked="checked"> Recuérdame
