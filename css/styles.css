@@ -29,13 +29,7 @@ body{
   
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-size: 1.4vw;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  font-size: 1.4vw;
-}
-:-ms-input-placeholder { /* IE 10+ */
+placeholder{
   font-size: 1.4vw;
 }
 
