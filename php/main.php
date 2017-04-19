@@ -12,7 +12,7 @@
     <div class='container'> <!-- abre container principal-->
       
       <div class="container_logo"> <!-- abre container del logo -->
-          <a href="main.php"><img class="img_logo" src="..\img\logoVA.png" alt="Logo del juego"></a> 
+          <a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a> 
       </div> <!-- cierra container del logo -->
       
       <div class="container_menu"> <!-- abre container menu -->
