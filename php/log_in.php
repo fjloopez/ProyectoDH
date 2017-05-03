@@ -22,10 +22,10 @@
 			<form class="form_login" action="/action_page.php">
 			  	<div class="container_form">
 				    <label for="nameuser">Usuario</label>
-				    <input type="text" placeholder="Nombre de usuario" name="uname" required id="nameuser">
+				    <input type="text" placeholder="Nombre de usuario" name="username" required id="nameuser">
 
 				    <label for="userpassword">Contraseña</label>
-				    <input type="password" placeholder="Contraseña" name="psw" required id="userpassword">
+				    <input type="password" placeholder="Contraseña" name="password" required id="userpassword">
 
 			    	<button type="submit">Login</button>
 			  		<input type="checkbox" checked="checked"> Recuérdame

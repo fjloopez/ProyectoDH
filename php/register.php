@@ -1,3 +1,7 @@
+<?php 
+	session_start(); 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,10 +21,19 @@
 			<?php include 'menu.php'; ?>
 		</div><!-- cierra container menu -->
 
+		<?php if (isset($_SESSION['errors'])): ?>	<!-- abre el chequeo de errores -->
+		<?php echo 'llegue aca1 <br>' ?>	
+			<div class="alert">
+				<?php foreach($_SESSION['errors'] as $error): ?>
+					<?php echo 'llegue aca 2 <br>'; ?>
+					<p><?php echo $error; ?></p>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>		<!-- cierra el chequeo de errores -->
+
 
 		<div class="container_register"> <!-- abre container register -->
-          
-			<form action="script.php" method="post" class="register">
+			<form action="register.php" method="post" class="register">
 				<label for="nombreyapellido">Nombre y Apellido</label>
 				<br>
 				<input type="text" name="firstname" placeholder="Nombre" required id="nombreyapellido">
@@ -32,14 +45,14 @@
 				<input type="email" name="email" placeholder="Correo Electrónico" required id="mail">
 				<br>
 
-				<label for="makepassword"> Creá tu Contraseña </label>
+				<label for="password"> Creá tu Contraseña </label>
 				<br>
-				<input type="password" name="contraseña" placeholder="Contraseña" required id="makepassword">
+				<input type="password" name="password" placeholder="Contraseña" required id="password">
 				<br>
 
 				<label for="checkpassword"> Confirmá Contraseña </label>
 				<br>
-				<input type="password" name="verificacioncontraseña" placeholder="Confirmar Contraseña" required id="checkpassword">
+				<input type="password" name="checkpassword" placeholder="Confirmar Contraseña" required id="checkpassword">
 				<br>
 
 				<label for="birth_date">Fecha de Nacimiento </label>
@@ -83,3 +96,7 @@
 
 </body>
 </html>
+
+<?php
+	unset($_SESSION['errors']);
+?>
