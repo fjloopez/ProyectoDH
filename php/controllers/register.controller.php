@@ -12,14 +12,15 @@ if (count($errors)) {
 	exit();
 }
 
-// guardarUsuario($path);
-
-// $path = dirname(__FILE__) . '/../images/';
-// guardarImagen('avatar', $path);
-
-
-//ver como hacer el redirect
+/*==============================================
+cambiar por ../register_completed.php
+================================================*/
+header('Location: ../register.php');
+exit;
 
 
+/*==============================================
+agregar la parte de JSON
+================================================*/
 ?>
 

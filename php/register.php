@@ -1,5 +1,6 @@
 <?php 
-	session_start(); 
+	session_start();
+	var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +22,9 @@
 			<?php include 'menu.php'; ?>
 		</div><!-- cierra container menu -->
 
-		<?php if (isset($_SESSION['errors'])): ?>	<!-- abre el chequeo de errores -->
-		<?php echo 'llegue aca1 <br>' ?>	
+		<?php if (isset($_SESSION['errors'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
 				<?php foreach($_SESSION['errors'] as $error): ?>
-					<?php echo 'llegue aca 2 <br>'; ?>
 					<p><?php echo $error; ?></p>
 				<?php endforeach; ?>
 			</div>
@@ -33,7 +32,7 @@
 
 
 		<div class="container_register"> <!-- abre container register -->
-			<form action="register.php" method="post" class="register">
+			<form action="controllers/register.controller.php" method="post" class="register" enctype="multipart/form-data">
 				<label for="nombreyapellido">Nombre y Apellido</label>
 				<br>
 				<input type="text" name="firstname" placeholder="Nombre" required id="nombreyapellido">
