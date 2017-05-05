@@ -74,7 +74,7 @@
 		
 		//newUser es un array del tipo usuario
 		$newUser = [
-			'nombre' => $_POST['nombre'],
+			'name' => $_POST['firstname'],
 			'email' => $_POST['email'],
 			// 'birth_date' => $_POST['edad'],
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),

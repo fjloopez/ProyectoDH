@@ -1,6 +1,10 @@
 <?php 
 	session_start();
-	var_dump($_SESSION);
+	var_dump($_POST);
+
+	$nameValue = '';
+	$surnameValue = '';
+	$emailValue = '';
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +31,11 @@
 				<?php foreach($_SESSION['errors'] as $error): ?>
 					<p><?php echo $error; ?></p>
 				<?php endforeach; ?>
+				<?php  
+					$nameValue = $_SESSION['name'];
+					$surnameValue = $_SESSION['surname'];
+					$emailValue = $_SESSION['email'];
+				?>
 			</div>
 		<?php endif; ?>		<!-- cierra el chequeo de errores -->
 
@@ -35,13 +44,14 @@
 			<form action="controllers/register.controller.php" method="post" class="register" enctype="multipart/form-data">
 				<label for="nombreyapellido">Nombre y Apellido</label>
 				<br>
-				<input type="text" name="firstname" placeholder="Nombre" required id="nombreyapellido">
-				<input type="text" name="surname" placeholder="Apellido" required>
+				<input type="text" name="firstname" placeholder= "Nombre" value="<?php echo $nameValue; ?>" required id="nombreyapellido"> 
+
+				<input type="text" name="surname" placeholder="Apellido" value="<?php echo $surnameValue; ?>" required>
 				<br>
 
 				<label for="mail">Correo Electrónico </label>
 				<br>
-				<input type="email" name="email" placeholder="Correo Electrónico" required id="mail">
+				<input type="email" name="email" placeholder="Correo Electrónico" value="<?php echo $emailValue; ?>" required id="mail">
 				<br>
 
 				<label for="password"> Creá tu Contraseña </label>
