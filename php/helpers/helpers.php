@@ -26,26 +26,34 @@
 		}
 
 
+		//validar fecha de nacimiento		
+		$birth_date = trim($_POST['birth_date']);
+		if ($birth_date == "") {
+
+			$errors[] = "La fecha ingresada no es válida";
+		}
+
+
 		/*==============================================
-			verificar que tipo de dato devuelve el campo fecha de nacimiento (borrar este coment)
-			deberia ser un string AAAA-DD-MM
+		lo q validamos, chequea q la fecha sea valida
+		cuando no sea valida tiene q tirar un error
+		sino, q siga
 
-			recorrer str hasta 1er -, con true => $año
-			rocorrer str hasta 2do - => $otro_str
-			recorrer otro_str -, con true => $dia
-			recorrer otro_str - => $mes
-
-		echo strstr("Hello world!","world",true); 	es para llegar hasta el "-"
-
+		y aca hay q meter lo q hicimos
 
 
 
 		===============================================*/
+
+
+
 		// //validar fecha de nacimiento
 		// $edad = trim($_POST['birth_date']);
 		// if (!is_numeric($birth_date)) {
 		// 	$errors[] = "La fecha de nacimiento tiene que ser numérica";
 		// }
+
+
 
 		//validar pass
 		if ($_POST['password'] != $_POST['checkpassword']) {
