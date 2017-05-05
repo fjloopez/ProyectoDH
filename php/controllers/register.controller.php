@@ -12,15 +12,8 @@ if (count($errors)) {
 	exit();
 }
 
-/*==============================================
-cambiar por ../register_completed.php
-================================================*/
-header('Location: ../register.php');
+header('Location: ../succesful_register.php');
 exit;
 
-
-/*==============================================
-agregar la parte de JSON
-================================================*/
 ?>
 
