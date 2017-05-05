@@ -12,6 +12,8 @@ if (count($errors)) {
 	exit();
 }
 
+saveuser();
+
 header('Location: ../succesful_register.php');
 exit;
 

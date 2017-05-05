@@ -68,7 +68,7 @@
 		return $users;
 	}
 
-	function saveUser($path){
+	function saveUser(){
 	//users es un array de arrays usuarios
 		$users = getUsers();
 		
@@ -78,7 +78,7 @@
 			'email' => $_POST['email'],
 			// 'birth_date' => $_POST['edad'],
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-			'path' => $path				//QUISAWEA?
+			// 'path' => $path				//QUISAWEA?
 		];
 
 		//guardo newUser dentro del array de usuarios
