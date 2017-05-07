@@ -1,10 +1,11 @@
 <?php 
 	session_start();
-	var_dump($_POST);
+	var_dump($_SESSION);
 
 	$nameValue = '';
 	$surnameValue = '';
 	$emailValue = '';
+	$birth_date ='';
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +36,8 @@
 					$nameValue = $_SESSION['name'];
 					$surnameValue = $_SESSION['surname'];
 					$emailValue = $_SESSION['email'];
+					$birth_date = $_SESSION['birth_date'];
+					$gender = $_SESSION['gender'];
 				?>
 			</div>
 		<?php endif; ?>		<!-- cierra el chequeo de errores -->
@@ -66,14 +69,14 @@
 
 				<label for="birth_date">Fecha de Nacimiento </label>
 				<br>
-				<input type="date" name="birth_date" placeholder="Fecha de Nacimiento" required>
+				<input type="date" name="birth_date" value="<?php echo $birth_date; ?>" required>
 				<br>
 
 				<label> Género</label>
 				<br>
-				<input type="radio" name="gender" value="male" checked> Hombre<br>
-				<input type="radio" name="gender" value="female"> Mujer<br>
-				<input type="radio" name="gender" value="other"> Prefiero no decirlo
+				<input type="radio" name="gender" value="male" <?php if ($gender = 'male'){ echo 'checked';} ?> > Hombre<br>
+				<input type="radio" name="gender" value="female" <?php if ($gender = 'female'){ echo 'checked';} ?>> Mujer<br>
+				<input type="radio" name="gender" value="other" <?php if ($gender = 'other'){ echo 'checked';} ?>> Prefiero no decirlo
 				<br>
 
 				<button align="center" type="submit">Enviar</button>

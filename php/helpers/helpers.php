@@ -1,23 +1,33 @@
 <?php
 
-	//validaciones
+	/*=========================
+		validaciones
+	=========================*/	
 	function validarRegistro () {
 
 		$errors = [];
 
-		//validar nombre
+		/*=========================
+			validar nombre
+		=========================*/
 		$nombre = trim($_POST['firstname']);
 		if ($nombre == "") {
 			$errors[] = "Te faltó ingresar tu nombre";
 		}
 
-		//validar apellido
+		
+		/*=========================
+			validar apellido
+		=========================*/
 		$nombre = trim($_POST['surname']);
 		if ($nombre == "") {
 			$errors[] = "Te faltó ingresar tu apellido";
 		}
 
-		//validar email
+		
+		/*=========================
+			validar email
+		=========================*/
 		$email = trim($_POST['email']);
 		if ($email == "") {
 			$errors[] = "Te faltó ingresar tu email";
@@ -26,39 +36,41 @@
 		}
 
 
-		//validar fecha de nacimiento		
-		$birth_date = trim($_POST['birth_date']);
-		if ($birth_date == "") {
-
-			$errors[] = "La fecha ingresada no es válida";
-		}
-
-
-		/*==============================================
-		lo q validamos, chequea q la fecha sea valida
-		cuando no sea valida tiene q tirar un error
-		sino, q siga
-
-		y aca hay q meter lo q hicimos
-
-
-
-		===============================================*/
-
-
-
-		// //validar fecha de nacimiento
-		// $edad = trim($_POST['birth_date']);
-		// if (!is_numeric($birth_date)) {
-		// 	$errors[] = "La fecha de nacimiento tiene que ser numérica";
-		// }
-
-
-
-		//validar pass
+		/*=========================
+			validar pass
+		=========================*/
 		if ($_POST['password'] != $_POST['checkpassword']) {
 			$errors[] = "Las contraseñas no coinciden";
 		}
+
+
+
+		/*=========================
+			validar fecha de nacimiento
+		=========================*/		
+		$birth_date = trim($_POST['birth_date']);
+		if ($birth_date == "") {
+			$errors[] = "Te faltó ingresar tu fecha de nacimiento";
+		}
+		$birth_date = explode('-', $birth_date);
+		// toma los valores del array correspondientes al año
+		$year = $birth_date[0];
+		// toma los valores del array correspondientes al mes
+		$month = $birth_date[1];
+		// toma los valores del array correspondientes al dia
+		$day = $birth_date[2];
+		
+		if (!checkdate($month, $day, $year)){
+			$errors[] = "La fecha de nacimiento ingresada no es válida";
+		}
+
+
+		/*=========================
+			validar genero
+		=========================*/	
+
+
+
 
 		//devuelvo los errores
 		return $errors;
@@ -77,7 +89,7 @@
 	}
 
 	function saveUser(){
-	//users es un array de arrays usuarios
+		//users es un array de arrays usuarios
 		$users = getUsers();
 		
 		//newUser es un array del tipo usuario
