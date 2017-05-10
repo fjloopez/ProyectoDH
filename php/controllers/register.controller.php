@@ -5,7 +5,7 @@ include('../helpers/helpers.php');
 
 
 
-$errors = validarRegistro();
+$errors = validateRegister();
 
 if (count($errors)) {
 	$_SESSION['errors'] = $errors;
@@ -20,8 +20,5 @@ if (count($errors)) {
 
 saveuser();
 
-header('Location: ../succesful_register.php');
+header('Location: ../log_in.php');
 exit;
-
-?>
-

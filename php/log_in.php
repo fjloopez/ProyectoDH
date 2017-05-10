@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Log In</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/styles.css">
-</head>
+<?php include 'head.php' ?>
 <body>
 	<div class='container'> <!-- abre container principal-->
 
 		<div class="container_logo">
-			<a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a> 		</div>
+			<a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a> 		
+		</div>
 
 		<div class="container_menu"><!-- abre container imagen -->
 			<?php include 'menu.php'; ?>
@@ -18,11 +12,16 @@
 
 
 		<div class="container_login"> <!-- abre container log in -->
+
+		<?php  
+
+			// $username = $_SESSION['username'];
+		?>
           
-			<form class="form_login" action="/action_page.php">
+			<form class="form_login" action="controllers/log_in.controller.php">
 			  	<div class="container_form">
 				    <label for="nameuser">Usuario</label>
-				    <input type="text" placeholder="Nombre de usuario" name="username" required id="nameuser">
+				    <input type="text" placeholder="Nombre de usuario" name="username" required id="nameuser" value="<?php //echo $username; ?>">
 
 				    <label for="userpassword">Contraseña</label>
 				    <input type="password" placeholder="Contraseña" name="password" required id="userpassword">
@@ -59,3 +58,7 @@
 
 </body>
 </html>
+
+<?php
+	unset($_SESSION['errors']);
+?>

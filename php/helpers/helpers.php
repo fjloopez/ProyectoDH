@@ -3,7 +3,7 @@
 	/*=========================
 		validaciones
 	=========================*/	
-	function validarRegistro () {
+	function validateRegister () {
 
 		$errors = [];
 
@@ -78,6 +78,11 @@
 	}
 
 
+	validateLogIn(){
+		
+	}
+
+
 	function getUsers (){
 		$users = @file_get_contents('../../users.json');
 		if (!$users) {
@@ -111,8 +116,3 @@
 		file_put_contents('../../users.json', $users);
 	}
 
-
-
-
-
-?>
