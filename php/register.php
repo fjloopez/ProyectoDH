@@ -18,9 +18,9 @@
 			<?php include 'menu.php'; ?>
 		</div><!-- cierra container menu -->
 
-		<?php if (isset($_SESSION['errors'])): ?>	<!-- abre el chequeo de errores -->	
+		<?php if (isset($_SESSION['errors_register'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
-				<?php foreach($_SESSION['errors'] as $error): ?>
+				<?php foreach($_SESSION['errors_register'] as $error): ?>
 					<p><?php echo $error; ?></p>
 				<?php endforeach; ?>
 				<?php  
@@ -101,5 +101,5 @@
 </html>
 
 <?php
-	unset($_SESSION['errors']);
+	unset($_SESSION['errors_register']);
 ?>

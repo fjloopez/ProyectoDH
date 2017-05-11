@@ -3,11 +3,17 @@
 session_start();
 include('../helpers/helpers.php');
 
-//$errors = validarRegistro();
-
-$_SESSION['log_in'] = validateLogIn();
+$errors = validateLogIn();
 
 
+if (count($errors)) {
+	$_SESSION['errors_log_in'] = $errors;
+	$_SESSION['username'] = $_POST['username']; 
+	header('Location: ../log_in.php');
+	exit();
+}
 
-//header('Location: ../main.php');
+logUser ();
+
+header('Location: ../main.php');
 exit;

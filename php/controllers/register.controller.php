@@ -8,7 +8,7 @@ include('../helpers/helpers.php');
 $errors = validateRegister();
 
 if (count($errors)) {
-	$_SESSION['errors'] = $errors;
+	$_SESSION['errors_register'] = $errors;
 	$_SESSION['name'] = $_POST['firstname']; 
 	$_SESSION['surname'] = $_POST['surname'];
 	$_SESSION['email'] = $_POST['email'];

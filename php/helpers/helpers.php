@@ -5,14 +5,14 @@
 	=========================*/	
 	function validateRegister () {
 
-		$errors = [];
+		$errors_register = [];
 
 		/*=========================
 			validar nombre
 		=========================*/
 		$nombre = trim($_POST['firstname']);
 		if ($nombre == "") {
-			$errors[] = "Te faltó ingresar tu nombre";
+			$errors_register[] = "Te faltó ingresar tu nombre";
 		}
 
 		
@@ -21,7 +21,7 @@
 		=========================*/
 		$nombre = trim($_POST['surname']);
 		if ($nombre == "") {
-			$errors[] = "Te faltó ingresar tu apellido";
+			$errors_register[] = "Te faltó ingresar tu apellido";
 		}
 
 		
@@ -30,9 +30,9 @@
 		=========================*/
 		$email = trim($_POST['email']);
 		if ($email == "") {
-			$errors[] = "Te faltó ingresar tu email";
+			$errors_register[] = "Te faltó ingresar tu email";
 		} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$errors[] = "El email ingresado no es válido";
+			$errors_register[] = "El email ingresado no es válido";
 		}
 
 
@@ -40,7 +40,7 @@
 			validar pass
 		=========================*/
 		if ($_POST['password'] != $_POST['checkpassword']) {
-			$errors[] = "Las contraseñas no coinciden";
+			$errors_register[] = "Las contraseñas no coinciden";
 		}
 
 
@@ -50,7 +50,7 @@
 		=========================*/		
 		$birth_date = trim($_POST['birth_date']);
 		if ($birth_date == "") {
-			$errors[] = "Te faltó ingresar tu fecha de nacimiento";
+			$errors_register[] = "Te faltó ingresar tu fecha de nacimiento";
 		}
 		$birth_date = explode('-', $birth_date);
 		// toma los valores del array correspondientes al año
@@ -61,11 +61,11 @@
 		$day = $birth_date[2];
 		
 		if (!checkdate($month, $day, $year)){
-			$errors[] = "La fecha de nacimiento ingresada no es válida";
+			$errors_register[] = "La fecha de nacimiento ingresada no es válida";
 		}
 
 
-		/*=========================
+		/*=========================7
 			validar genero
 		=========================*/	
 
@@ -73,13 +73,14 @@
 
 
 		//devuelvo los errores
-		return $errors;
+		return $errors_register;
 
 	}
 
 
-	validateLogIn(){
-		
+	function validateLogIn(){
+		$errors_log_in = [];
+
 	}
 
 
@@ -114,5 +115,11 @@
 
 		//guardarlo en el archivo json
 		file_put_contents('../../users.json', $users);
+	}
+
+
+	function logUser (){
+		$users = getUsers();
+
 	}
 
