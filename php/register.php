@@ -4,6 +4,7 @@
 
 	$nameValue = '';
 	$surnameValue = '';
+	$usernameValue = '';
 	$emailValue = '';
 	$birth_date ='';
 ?>
@@ -26,6 +27,7 @@
 				<?php  
 					$nameValue = $_SESSION['name'];
 					$surnameValue = $_SESSION['surname'];
+					$usernameValue = $_SESSION['username'];
 					$emailValue = $_SESSION['email'];
 					$birth_date = $_SESSION['birth_date'];
 					$gender = $_SESSION['gender'];
@@ -41,6 +43,11 @@
 				<input type="text" name="firstname" placeholder= "Nombre" value="<?php echo $nameValue; ?>" required id="nombreyapellido"> 
 
 				<input type="text" name="surname" placeholder="Apellido" value="<?php echo $surnameValue; ?>" required>
+				<br>
+
+				<label for="username"> Nombre de Usuario </label>
+				<br>
+				<input type="text" name="username" placeholder="Usuario" value="<?php echo $usernameValue; ?>" required id="username">
 				<br>
 
 				<label for="mail">Correo Electrónico </label>
