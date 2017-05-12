@@ -20,11 +20,18 @@
 			validar apellido
 		=========================*/
 		$nombre = trim($_POST['surname']);
-		if ($nombre == "") {
+		if ($apellido == "") {
 			$errors_register[] = "Te faltó ingresar tu apellido";
 		}
 
-		
+		/*=========================
+			validar username
+		=========================*/
+		$usuario = trim($_POST['username']);
+		if ($usuario == "") {
+			$errors_register[] = "Te faltó ingresar tu nombre de usuario";
+		}
+
 		/*=========================
 			validar email
 		=========================*/
@@ -65,7 +72,7 @@
 		}
 
 
-		/*=========================7
+		/*=========================
 			validar genero
 		=========================*/	
 
@@ -125,9 +132,9 @@
 		$newUser = [
 			'name' => $_POST['firstname'],
 			'email' => $_POST['email'],
-			'birth_date' => $_POST[''],
+			'birth_date' => $_POST['birth_date'],
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-			// 'path' => $path				//QUISAWEA?
+			// 'path' => $path				
 		];
 
 		//guardo newUser dentro del array de usuarios

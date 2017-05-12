@@ -11,6 +11,7 @@ if (count($errors)) {
 	$_SESSION['errors_register'] = $errors;
 	$_SESSION['name'] = $_POST['firstname']; 
 	$_SESSION['surname'] = $_POST['surname'];
+	$_SESSION['username'] = $_POST['username'];
 	$_SESSION['email'] = $_POST['email'];
 	$_SESSION['birth_date'] = $_POST['birth_date'];
 	$_SESSION['gender'] = $_POST['gender'];
