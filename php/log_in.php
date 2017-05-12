@@ -1,4 +1,7 @@
 <?php include 'head.php' ?>
+<?php  
+	$username = '';
+?>
 <body>
 	<div class='container'> <!-- abre container principal-->
 
@@ -12,16 +15,23 @@
 
 
 		<div class="container_login"> <!-- abre container log in -->
-
-		<?php  
-
-			// $username = $_SESSION['username'];
-		?>
+		
+		<?php if (isset($_SESSION['errors_log_in'])): ?>	<!-- abre el chequeo de errores -->	
+			<div class="alert">
+				<?php foreach($_SESSION['errors_register'] as $error): ?>
+					<p><?php echo $error; ?></p>
+				<?php endforeach; ?>
+				<?php  
+					$username = $_SESSION['username'];
+				?>
+			</div>
+		<?php endif; ?>		<!-- cierra el chequeo de errores -->
+		
           
-			<form class="form_login" action="controllers/log_in.controller.php">
+			<form class="form_login" action="controllers/log_in.controller.php" method="post" enctype="multipart/form-data">
 			  	<div class="container_form">
 				    <label for="nameuser">Usuario</label>
-				    <input type="text" placeholder="Nombre de usuario" name="username" required id="nameuser" value="<?php //echo $username; ?>">
+				    <input type="text" placeholder="Nombre de usuario" name="username" required id="username" value="<?php echo $username; ?>">
 
 				    <label for="userpassword">Contraseña</label>
 				    <input type="password" placeholder="Contraseña" name="password" required id="userpassword">

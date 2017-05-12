@@ -19,7 +19,7 @@
 		/*=========================
 			validar apellido
 		=========================*/
-		$nombre = trim($_POST['surname']);
+		$apellido = trim($_POST['surname']);
 		if ($apellido == "") {
 			$errors_register[] = "Te faltó ingresar tu apellido";
 		}
@@ -113,13 +113,13 @@
 
 	function validateLogIn(){
 		$errors_log_in = [];
-		$user = getUserByUsername($_POST['username'])
+		$user = getUserByUsername($_POST['username']);
 		if (!$user){
 			$errors_log_in[] = "No se encontro el nombre de usuario";
 		} elseif (!checkPassword($user)){
 			$errors_log_in[] = "La contraseña ingresada es incorrecta";
 		} else{
-			//logueaste!!!!!!
+			echo '<h3> logueast </h3>';
 		}
 
 	}
@@ -131,8 +131,10 @@
 		//newUser es un array del tipo usuario
 		$newUser = [
 			'name' => $_POST['firstname'],
+			'surname' => $_POST['surname'],
 			'email' => $_POST['email'],
 			'birth_date' => $_POST['birth_date'],
+			'username' => $_POST['username'],
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 			// 'path' => $path				
 		];
