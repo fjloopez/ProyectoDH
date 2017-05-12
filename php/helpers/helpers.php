@@ -78,11 +78,6 @@
 	}
 
 
-	function validateLogIn(){
-		$errors_log_in = [];
-
-	}
-
 
 	function getUsers (){
 		$users = @file_get_contents('../../users.json');
@@ -94,6 +89,34 @@
 		return $users;
 	}
 
+	function getUserByUsername($username){
+		$users = getUsers();
+		foreach ($users as $user) {
+			if ($user['username'] == $username) {
+				return $user;
+			}
+		}
+		return false;
+	}
+
+	function checkPassword($user){
+		//TODO verificar qeu contraseña ingresada sea igual que contraseña hasheada en el json
+	}
+
+
+	function validateLogIn(){
+		$errors_log_in = [];
+		$user = getUserByUsername($_POST['username'])
+		if (!$user){
+			$errors_log_in[] = "No se encontro el nombre de usuario";
+		} elseif (!checkPassword($user)){
+			$errors_log_in[] = "La contraseña ingresada es incorrecta";
+		} else{
+			//logueaste!!!!!!
+		}
+
+	}
+
 	function saveUser(){
 		//users es un array de arrays usuarios
 		$users = getUsers();
@@ -102,7 +125,7 @@
 		$newUser = [
 			'name' => $_POST['firstname'],
 			'email' => $_POST['email'],
-			// 'birth_date' => $_POST['edad'],
+			'birth_date' => $_POST[''],
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 			// 'path' => $path				//QUISAWEA?
 		];
@@ -122,4 +145,7 @@
 		$users = getUsers();
 
 	}
+
+
+
 
