@@ -18,7 +18,7 @@
 		
 		<?php if (isset($_SESSION['errors_log_in'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
-				<?php foreach($_SESSION['errors_register'] as $error): ?>
+				<?php foreach($_SESSION['errors_log_in'] as $error): ?>
 					<p><?php echo $error; ?></p>
 				<?php endforeach; ?>
 				<?php  
@@ -70,5 +70,5 @@
 </html>
 
 <?php
-	unset($_SESSION['errors']);
+	unset($_SESSION['errors_log_in']);
 ?>

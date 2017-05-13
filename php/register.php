@@ -7,6 +7,7 @@
 	$usernameValue = '';
 	$emailValue = '';
 	$birth_date ='';
+	$gender = '';
 ?>
 <body>
 	<div class='container'> <!-- abre container principal-->
@@ -72,10 +73,9 @@
 
 				<label> Género</label>
 				<br>
-				<input type="radio" name="gender" value="male" <?php if ($gender = 'male'){ echo 'checked';} ?> > Hombre<br>
-				<input type="radio" name="gender" value="female" <?php if ($gender = 'female'){ echo 'checked';} ?>> Mujer<br>
-				<input type="radio" name="gender" value="other" <?php if ($gender = 'other'){ echo 'checked';} ?>> Prefiero no decirlo
-				<br>
+				<input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> > Hombre<br>
+				<input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> > Mujer<br>
+				<input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> > Prefiero no decirlo<br>
 
 				<button align="center" type="submit">Enviar</button>
 				<button type="reset">Borrar</button>

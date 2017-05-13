@@ -110,8 +110,10 @@ Imagen personaje
   transform: translate(-50%,-50%);
 }
 
-.play_button{
+.play_button_link{
   font-size: 3vw;
+  text-decoration: none;
+  color: white;
 }
 
 .img_character {

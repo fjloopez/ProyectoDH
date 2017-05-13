@@ -1,4 +1,11 @@
 <?php include 'head.php' ?>
+<?php 
+      if (!isset($_SESSION['logUser'])){
+        $play_button = 'log_in.php';
+      } else{
+        $play_button = 'game.php';
+      }
+    ?>
 
   <body>
     
@@ -18,7 +25,7 @@
           <img class="img_character" src="..\img\Personajes.png" alt="Main character">
 
           <div class="container_play_button"> <!-- abre container del boton jugar -->
-            <button type="button" class="play_button">Play!</button>  
+            <button type="button" class="play_button" > <a href="<?php echo $play_button ?>" class="play_button_link">Play!</a></button>  
           </div> <!-- cierra container del boton jugar -->
 
         </div> <!-- cierra container imagen -->

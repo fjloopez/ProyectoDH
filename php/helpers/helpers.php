@@ -107,7 +107,8 @@
 	}
 
 	function checkPassword($user){
-		//TODO verificar qeu contraseña ingresada sea igual que contraseña hasheada en el json
+		return true;
+		
 	}
 
 
@@ -115,11 +116,14 @@
 		$errors_log_in = [];
 		$user = getUserByUsername($_POST['username']);
 		if (!$user){
-			$errors_log_in[] = "No se encontro el nombre de usuario";
+			$errors_log_in[] = "El nombre de usuario ingresado es incorrecto";
+			return $errors_log_in;
 		} elseif (!checkPassword($user)){
 			$errors_log_in[] = "La contraseña ingresada es incorrecta";
+			return $errors_log_in;
 		} else{
-			echo '<h3> logueast </h3>';
+			$_POST['logUser'] = $user;
+			return $errors_log_in;
 		}
 
 	}
@@ -136,7 +140,11 @@
 			'birth_date' => $_POST['birth_date'],
 			'username' => $_POST['username'],
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-			// 'path' => $path				
+			// 'path' => $path
+
+			// $_SESSION['user_img'] usar esto para guardar la img del usuario, se usa en menu de esta forma
+
+
 		];
 
 		//guardo newUser dentro del array de usuarios
@@ -150,10 +158,6 @@
 	}
 
 
-	function logUser (){
-		$users = getUsers();
-
-	}
 
 
 
