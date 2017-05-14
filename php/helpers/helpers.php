@@ -75,8 +75,9 @@
 		/*=========================
 			validar genero
 		=========================*/	
-
-
+		// if ($gender == "") {
+		// 	$errors_register[] = "Te faltó ingresar tu género";
+		// }
 
 
 		//devuelvo los errores

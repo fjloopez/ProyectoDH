@@ -247,7 +247,7 @@ Log In
 
 
 input[type=text], input[type=password], input[type=email], input[type=date], input[type=username]  {
-    width: 100%;
+    width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -263,6 +263,11 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+}
+
+.buttonRegistro{
+  width: 60%;
+  margin-left: 18%;
 }
 
 button:hover {
@@ -449,15 +454,8 @@ Mobile
   font-size: 2.5vw;
 }
 
-  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-size: 2.5vw;
-  }
-  ::-moz-placeholder { /* Firefox 19+ */
-    font-size: 2.5vw;
-  }
-  :-ms-input-placeholder { /* IE 10+ */
-    font-size: 2.5vw;
-  }
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=username]  {
+    width: 100%;
 
 }
 
