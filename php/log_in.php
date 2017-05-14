@@ -30,10 +30,10 @@
           
 			<form class="form_login" action="controllers/log_in.controller.php" method="post" enctype="multipart/form-data">
 			  	<div class="container_form">
-				    <label for="nameuser">Usuario</label>
-				    <input type="text" placeholder="Nombre de usuario" name="username" required id="username" value="<?php echo $username; ?>">
+				    <label for="nameuser">Usuario</label><br>
+				    <input type="text" placeholder="Nombre de usuario" name="username" required id="username" value="<?php echo $username; ?>"><br>
 
-				    <label for="userpassword">Contraseña</label>
+				    <label for="userpassword">Contraseña</label><br>
 				    <input type="password" placeholder="Contraseña" name="password" required id="userpassword">
 
 			    	<button type="submit">Login</button>

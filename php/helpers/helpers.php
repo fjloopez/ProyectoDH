@@ -14,6 +14,9 @@
 		if ($nombre == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre";
 		}
+		if (ctype_alpha(str_replace(' ', '', $name)) === false) {
+			$errors[] = "El nombre sólo puede contener letras y espacios" ;
+		}
 
 		
 		/*=========================
@@ -30,6 +33,9 @@
 		$usuario = trim($_POST['username']);
 		if ($usuario == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre de usuario";
+		}
+		if (getUserByUsername($username) == !false) {
+			$errors_register[] = "El nombre de usuario ya está siendo usado";
 		}
 
 		/*=========================
