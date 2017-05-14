@@ -265,7 +265,7 @@ button {
     width: 100%;
 }
 
-.buttonRegistro{
+.buttonRegistro, .buttonLogin{
   width: 60%;
   margin-left: 18%;
 }
@@ -282,7 +282,7 @@ button:hover {
   background-color:#f1f1f1
 }
 
-span.psw {
+span.psw, span.rememberMe {
     float: right;
     padding-top: 16px;
 }

@@ -14,7 +14,9 @@
 		if ($nombre == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre";
 		}
-		if (ctype_alpha(str_replace(' ', '', $name)) === false) {
+
+		//ctype alpha chequea q los caracteres sean del alfabeto (sólo letras)
+		if (ctype_alpha(str_replace(' ', '', $nombre)) === false) {
 			$errors[] = "El nombre sólo puede contener letras y espacios" ;
 		}
 
@@ -26,6 +28,9 @@
 		if ($apellido == "") {
 			$errors_register[] = "Te faltó ingresar tu apellido";
 		}
+		if (ctype_alpha(str_replace(' ', '', $apellido)) === false) {
+			$errors[] = "El apellido sólo puede contener letras y espacios" ;
+		}
 
 		/*=========================
 			validar username
@@ -34,9 +39,13 @@
 		if ($usuario == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre de usuario";
 		}
-		if (getUserByUsername($username) == !false) {
+		if (getUserByUsername($_POST['username']) == !false) {
 			$errors_register[] = "El nombre de usuario ya está siendo usado";
 		}
+		if (ctype_alnum(str_replace(' ', '', $usuario)) === false) {
+			$errors[] = "El nombre de usuario sólo puede contener letras y números" ;
+		}
+
 
 		/*=========================
 			validar email
@@ -48,6 +57,8 @@
 			$errors_register[] = "El email ingresado no es válido";
 		}
 
+		// aca se podria hacer un ctype alnum, reemplazando el @ con str_replace
+
 
 		/*=========================
 			validar pass
@@ -55,6 +66,8 @@
 		if ($_POST['password'] != $_POST['checkpassword']) {
 			$errors_register[] = "Las contraseñas no coinciden";
 		}
+
+		//ver si hay alguna forma de usar todos los caracteres menos "<", ">" y cosas q me rompan el codigo
 
 
 

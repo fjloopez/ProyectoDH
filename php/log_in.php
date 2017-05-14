@@ -35,9 +35,12 @@
 
 				    <label for="userpassword">Contraseña</label><br>
 				    <input type="password" placeholder="Contraseña" name="password" required id="userpassword">
+				    <br><br>
 
-			    	<button type="submit">Login</button>
-			  		<input type="checkbox" checked="checked"> Recuérdame
+			    	<button class="buttonLogin" type="submit">Login</button><br>
+			  		<span class="rememberMe">
+			  			<input type="checkbox" checked="checked"> Recuérdame
+			 		</span><br>
 			 	</div>
 
 				<div class="container_form2">
