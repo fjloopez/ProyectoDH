@@ -17,7 +17,7 @@
 
 		//ctype alpha chequea q los caracteres sean del alfabeto (sólo letras)
 		if (ctype_alpha(str_replace(' ', '', $nombre)) === false) {
-			$errors[] = "El nombre sólo puede contener letras y espacios" ;
+			$errors_register[] = "El nombre sólo puede contener letras y espacios" ;
 		}
 
 		
@@ -29,7 +29,7 @@
 			$errors_register[] = "Te faltó ingresar tu apellido";
 		}
 		if (ctype_alpha(str_replace(' ', '', $apellido)) === false) {
-			$errors[] = "El apellido sólo puede contener letras y espacios" ;
+			$errors_register[] = "El apellido sólo puede contener letras y espacios" ;
 		}
 
 		/*=========================
@@ -43,7 +43,7 @@
 			$errors_register[] = "El nombre de usuario ya está siendo usado";
 		}
 		if (ctype_alnum(str_replace(' ', '', $usuario)) === false) {
-			$errors[] = "El nombre de usuario sólo puede contener letras y números" ;
+			$errors_register[] = "El nombre de usuario sólo puede contener letras y números" ;
 		}
 
 
@@ -94,9 +94,9 @@
 		/*=========================
 			validar genero
 		=========================*/	
-		// if ($gender == "") {
-		// 	$errors_register[] = "Te faltó ingresar tu género";
-		// }
+		if (!isset($_POST['gender'])) {
+			$errors_register[] = "Te faltó ingresar tu género";
+		}
 
 
 		//devuelvo los errores
