@@ -21,7 +21,8 @@
 		<?php if (isset($_SESSION['errors_register'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
 				<ul>
-				<?php foreach($_SESSION['errors_register'] as $error): ?>
+				<?php foreach((array)$_SESSION['errors_register'] as $error): ?>	
+						<!-- sin el "array" tiraba error de argumento invalido en el foreach -->
 					<li><?php echo $error; ?></li>
 				<?php endforeach; ?>
 				<?php  
