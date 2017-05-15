@@ -8,7 +8,7 @@ $errors = validateLogIn();
 
 if (count($errors)) {
 	$_SESSION['errors_log_in'] = $errors;
-	$_SESSION['username'] = $_POST['username'];
+	$_SESSION['username'] = $_POST['username'];	
 	header('Location: ../log_in.php');
 	exit();
 }

@@ -22,7 +22,9 @@
 					<p><?php echo $error; ?></p>
 				<?php endforeach; ?>
 				<?php  
-					$username = $_SESSION['username'];
+					if (!isset($_SESSION['errors_log_in']['notvalid'])){
+						$username = $_SESSION['username'];
+					}					
 				?>
 			</div>
 		<?php endif; ?>		<!-- cierra el chequeo de errores -->
@@ -39,7 +41,7 @@
 
 			    	<button class="buttonLogin" type="submit">Login</button><br>
 			  		<span class="rememberMe">
-			  			<input type="checkbox" checked="checked"> Recuérdame
+			  			<input type="checkbox" name="rememberMe" id="rememberMe"> Recuérdame
 			 		</span><br>
 			 	</div>
 

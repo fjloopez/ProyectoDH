@@ -2,7 +2,7 @@
 
 	/*=========================
 		validaciones
-	=========================*/	
+	=========================*/		
 	function validateRegister () {
 
 		$errors_register = [];
@@ -13,11 +13,9 @@
 		$nombre = trim($_POST['firstname']);
 		if ($nombre == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre";
-		}
-
-		//ctype alpha chequea q los caracteres sean del alfabeto (sólo letras)
-		if (ctype_alpha(str_replace(' ', '', $nombre)) === false) {
-			$errors[] = "El nombre sólo puede contener letras y espacios" ;
+		} elseif (ctype_alpha(str_replace(' ', '', $nombre)) === false) { 
+			//ctype alpha chequea q los caracteres sean del alfabeto (sólo letras)
+			$errors_register[] = "El nombre sólo puede contener letras y espacios" ;
 		}
 
 		
@@ -27,23 +25,20 @@
 		$apellido = trim($_POST['surname']);
 		if ($apellido == "") {
 			$errors_register[] = "Te faltó ingresar tu apellido";
-		}
-		if (ctype_alpha(str_replace(' ', '', $apellido)) === false) {
-			$errors[] = "El apellido sólo puede contener letras y espacios" ;
+		} elseif (ctype_alpha(str_replace(' ', '', $apellido)) === false) {
+			$errors_register[] = "El apellido sólo puede contener letras y espacios" ;
 		}
 
 		/*=========================
 			validar username
 		=========================*/
-		$usuario = trim($_POST['username']);
-		if ($usuario == "") {
-			$errors_register[] = "Te faltó ingresar tu nombre de usuario";
-		}
-		if (getUserByUsername($_POST['username']) == !false) {
-			$errors_register[] = "El nombre de usuario ya está siendo usado";
-		}
-		if (ctype_alnum(str_replace(' ', '', $usuario)) === false) {
-			$errors[] = "El nombre de usuario sólo puede contener letras y números" ;
+		$username = strtolower(trim($_POST['username']));
+		if ($username == "") {
+			$errors_register = "Te faltó ingresar tu nombre de usuario";
+		} elseif (ctype_alnum(str_replace(' ', '', $username)) === false) {
+			$errors_register = "El nombre de usuario sólo puede contener letras y números" ;
+		} elseif (getUserByUsername($username) == !false) {
+			$errors_register = "El nombre de usuario ya está siendo usado";
 		}
 
 
@@ -104,6 +99,22 @@
 
 	}
 
+	function validUsername(){
+		$username = strtolower(trim($_POST['username']));
+		if (($username == "") || (ctype_alnum(str_replace(' ', '', $username)) === false)) {
+			return false;
+		} 
+		return true;
+	}
+
+	function validPassword(){
+		$password = strtolower(trim($_POST['password']));
+		if (($password == "") || (ctype_alnum(str_replace(' ', '', $password)) === false)) {
+			return false;
+		} 
+		return true;
+	}
+
 
 
 	function getUsers (){
@@ -127,25 +138,33 @@
 	}
 
 	function checkPassword($user){
-		return true;
+		$pass = $_POST['password'];
+		$passHash = $user['password'];
+		if (password_verify($pass, $passHash)){
+			return true;	
+		}
+		return false;
 		
 	}
 
 
 	function validateLogIn(){
 		$errors_log_in = [];
-		$user = getUserByUsername($_POST['username']);
-		if (!$user){
-			$errors_log_in[] = "El nombre de usuario ingresado es incorrecto";
-			return $errors_log_in;
-		} elseif (!checkPassword($user)){
-			$errors_log_in[] = "La contraseña ingresada es incorrecta";
-			return $errors_log_in;
-		} else{
-			$_POST['logUser'] = $user;
-			return $errors_log_in;
-		}
-
+		
+		if (validUsername() && validPassword()) {
+			$username = strtolower($_POST['username']);
+			$user = getUserByUsername($username);
+			if (!$user){
+				$errors_log_in[] = "El nombre de usuario ingresado es incorrecto.";
+			} elseif (!checkPassword($user)){
+				$errors_log_in[] = "La contraseña ingresada es incorrecta.";
+			} else{
+				$_POST['logUser'] = $user;
+			}
+		} else {
+			$errors_log_in['notvalid'] = "El usuario o contraseña ingresada no es valido. Ingrese los datos nuevamente.";
+		}	
+		return $errors_log_in;
 	}
 
 	function saveUser(){
@@ -158,7 +177,7 @@
 			'surname' => $_POST['surname'],
 			'email' => $_POST['email'],
 			'birth_date' => $_POST['birth_date'],
-			'username' => $_POST['username'],
+			'username' => strtolower($_POST['username']),
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 			// 'path' => $path
 
