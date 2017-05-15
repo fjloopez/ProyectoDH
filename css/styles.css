@@ -393,7 +393,7 @@ Mobile
 }
 
   .nav_menu .container_mm{
-    width: 50%;
+    width: 20%;
     display: block;
     float: left;
   }
@@ -401,8 +401,8 @@ Mobile
   .nav_menu .container_mh{
     width: 49%;
     display: block;
-    float: right;
-    padding-left: 30%;
+    float: left;
+    padding-left: 25%;
     padding-top: 8%;
     
   }

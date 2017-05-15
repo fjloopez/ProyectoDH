@@ -16,6 +16,8 @@
 		} elseif (ctype_alpha(str_replace(' ', '', $nombre)) === false) { 
 			//ctype alpha chequea q los caracteres sean del alfabeto (sólo letras)
 			$errors_register[] = "El nombre sólo puede contener letras y espacios" ;
+		} elseif (strlen($nombre) > 30) {
+			$errors_register[] = "El nombre no puede tener más de 30 caracteres" ;
 		}
 
 		
@@ -27,6 +29,8 @@
 			$errors_register[] = "Te faltó ingresar tu apellido";
 		} elseif (ctype_alpha(str_replace(' ', '', $apellido)) === false) {
 			$errors_register[] = "El apellido sólo puede contener letras y espacios" ;
+		}elseif (strlen($apellido) > 30) {
+			$errors_register[] = "El apellido no puede tener más de 30 caracteres" ;
 		}
 
 		/*=========================
@@ -39,6 +43,8 @@
 			$errors_register = "El nombre de usuario sólo puede contener letras y números" ;
 		} elseif (getUserByUsername($username) == !false) {
 			$errors_register = "El nombre de usuario ya está siendo usado";
+		}elseif ((strlen($username) > 12)||(strlen($username) <4)) {
+			$errors_register[] = "El nombre de usuario debe tener entre 4 y 12 caracteres" ;
 		}
 
 
@@ -50,6 +56,8 @@
 			$errors_register[] = "Te faltó ingresar tu email";
 		} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			$errors_register[] = "El email ingresado no es válido";
+		} elseif (!preg_match('/@.+\./', $email)) {
+			$errors_register[] = "El email no puede usar caracteres raros";
 		}
 
 		// aca se podria hacer un ctype alnum, reemplazando el @ con str_replace
@@ -60,6 +68,8 @@
 		=========================*/
 		if ($_POST['password'] != $_POST['checkpassword']) {
 			$errors_register[] = "Las contraseñas no coinciden";
+		}elseif ((strlen($_POST['password']) > 20)||(strlen($_POST['password']) <8)) {
+			$errors_register[] = "La contraseña debe tener entre 8 y 20 caracteres" ;
 		}
 
 		//ver si hay alguna forma de usar todos los caracteres menos "<", ">" y cosas q me rompan el codigo
