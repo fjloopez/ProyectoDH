@@ -294,7 +294,7 @@ button {
     width: 100%;
 }
 
-.buttonRegistro, .buttonLogin{
+.buttonRegistro, .buttonLogin, .buttonLogout{
   width: 60%;
   margin-left: 18%;
 }
