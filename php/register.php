@@ -79,6 +79,11 @@
 				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> > Mujer</label><br>
 				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> > Prefiero no decirlo</label><br>
 
+				<div class="containerAvatar">
+					<label for="avatar">Avatar</label>
+					<input type="file" name="avatar">
+				</div>
+
 				<button class="buttonRegistro" align="center" type="submit">Enviar</button>
 				<button class="buttonRegistro" type="reset">Borrar</button>
 				
