@@ -1,7 +1,5 @@
 <?php include 'head.php' ?>
 <?php 
-	var_dump($_SESSION);
-
 	$nameValue = '';
 	$surnameValue = '';
 	$usernameValue = '';
@@ -22,8 +20,9 @@
 
 		<?php if (isset($_SESSION['errors_register'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
+				<ul>
 				<?php foreach($_SESSION['errors_register'] as $error): ?>
-					<p><?php echo $error; ?></p>
+					<li><?php echo $error; ?></li>
 				<?php endforeach; ?>
 				<?php  
 					$nameValue = $_SESSION['name'];
@@ -33,6 +32,7 @@
 					$birth_date = $_SESSION['birth_date'];
 					$gender = $_SESSION['gender'];
 				?>
+				</ul>
 			</div>
 		<?php endif; ?>		<!-- cierra el chequeo de errores -->
 

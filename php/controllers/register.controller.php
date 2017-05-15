@@ -19,7 +19,7 @@ if (count($errors)) {
 	exit();
 }
 
-saveuser();
 
+saveuser();
 header('Location: ../log_in.php');
 exit;
