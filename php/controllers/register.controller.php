@@ -22,15 +22,15 @@ if (count($errors)) {
 //Avatar
 if ($_FILES['avatar']['error'] == UPLOAD_ERR_OK ) {
 	//origen
-	$origen = $_FILES['avatar']['tmp_name'];
+	$origin = $_FILES['avatar']['tmp_name'];
 
 	//destino
 	$ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
 	$imageName = uniqid() . '.' . $ext;
-	$destino = __DIR__ . '/../../img/avatars/' . $imageName;
+	$destiny = __DIR__ . '/../../img/avatars/' . $imageName;
 
 	//subir imagen
-	move_uploaded_file(($origen), $destino);
+	move_uploaded_file(($origin), $destiny);
 }
 
 
