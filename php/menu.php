@@ -47,7 +47,7 @@
 
 			<!-- marca del usuario -->
 			<div class="container_user">
-				<a href="profile.php"><img class="user_img" src="<?php echo $user_img; ?>" alt="Avatar del usuario"></a>
+				<a href="#"><img class="user_img" src="<?php echo $user_img; ?>" alt="Avatar del usuario"></a> <!-- profile.php -->
 					<div class="showUsername">
 						<label><h4 class="usernameText"> <?php 
 							$showUsername = ($_SESSION['username']);
@@ -73,7 +73,7 @@
 				<div class="container_menu_list" id="container_menu_list">
 					<ul class="list_menu">
 						<li><a href="main.php"><h4>Home</h4></a></li>
-						<li><a href="profile.php"><h4>Profile</h4></a></li>
+						<li><a href="#"><h4>Profile</h4></a></li> <!-- href='profile.php' -->
 						<li><a href="faq.php"><h4>FAQs</h4></a></li>
 						<li><a href="log_out.php"><h4>Log Out</h4></a></li>
 					</ul>

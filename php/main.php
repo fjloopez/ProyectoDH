@@ -3,7 +3,8 @@
       if (!isset($_SESSION['logUser'])){
         $play_button = 'log_in.php';
       } else{
-        $play_button = 'game.php';
+        $play_button = '#';
+        // $play_button = 'game.php';
       }
     ?>
 
