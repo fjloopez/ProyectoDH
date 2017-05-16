@@ -111,7 +111,7 @@
 
 	function validUsername(){
 		$username = strtolower(trim($_POST['username']));
-		if (($username == "") || (ctype_alnum(str_replace(' ', '', $username)) === false)) {
+		if (($username == "") || (ctype_alnum(str_replace(' ', '', $username)) === false) || (strlen($username) > 12) || (strlen($username) <4)) {
 			return false;
 		} 
 		return true;
@@ -154,7 +154,6 @@
 			return true;	
 		}
 		return false;
-		
 	}
 
 
@@ -203,6 +202,25 @@
 		$users = json_encode($users);
 
 		//guardarlo en el archivo json
+		file_put_contents('../../users.json', $users);
+	}
+
+
+	function generateRandmonPassword($l = 8) {
+    	return substr(md5(uniqid(mt_rand(), true)), 0, $l);
+	}
+
+	function changePassword($username, $newPassword) {
+		$users = getUsers();
+		$password = password_hash($newPassword, PASSWORD_DEFAULT);
+		$indice = 0;
+		foreach ($users as $user) {
+			if ($user['username'] == $username){
+				$users[$indice]['password'] = $password;
+			}
+			$indice ++;
+		}
+		$users = json_encode($users);
 		file_put_contents('../../users.json', $users);
 	}
 

@@ -44,11 +44,12 @@
 			  			<input type="checkbox" name="rememberMe" id="rememberMe"> Recuérdame
 			 		</span><br>
 			 	</div>
-
-				<div class="container_form2">
-				    <span class="psw">¿Olvidaste tu <a href="#">Contraseña?</a></span>
-			    </div>
 			</form>
+		
+				<div class="container_form2">
+				    <span class="psw"><a href="forget_password.php">¿Olvide mi contraseña?</a></span>
+			    </div>
+			
           
      	</div><!-- cierra container log in -->
 

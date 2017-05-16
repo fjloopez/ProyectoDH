@@ -322,6 +322,29 @@ span.psw, span.rememberMe {
 
 
 /*====
+Forget password
+================*/
+
+.container_forget_psw{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;  
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;  
+}
+
+.container_forget_psw input, .container_forget_psw button{
+  font-size: 1.4vw;
+}
+
+
+/*====
 Register
 ================*/
 
@@ -477,6 +500,15 @@ Mobile
   }
 
   .container_login, .container_login button, input {
+    font-size: 3vw;
+
+  }
+
+  .container_register{
+    width: 100%;
+  }
+
+  .container_register, .container_register button, input {
     font-size: 3vw;
 
   }

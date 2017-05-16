@@ -5,7 +5,6 @@ include('../helpers/helpers.php');
 
 $errors = validateLogIn();
 
-
 if (count($errors)) {
 	$_SESSION['errors_log_in'] = $errors;
 	$_SESSION['username'] = $_POST['username'];	
