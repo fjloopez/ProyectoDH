@@ -1,4 +1,10 @@
 <?php session_start(); ?>
+<?php 
+	if (isset($_SESSION['rememberMe'])){
+	setcookie("rememberMe",$_SESSION['username'],time()+99999);
+}
+
+?>
 
 <!DOCTYPE html>
 <html>

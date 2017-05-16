@@ -15,7 +15,12 @@
 
 
 		<div class="container_login"> <!-- abre container log in -->
-		
+		<?php 
+			if (isset($_COOKIE["rememberMe"])){
+				$username = $_COOKIE['rememberMe'];
+			}
+		?>
+
 		<?php if (isset($_SESSION['errors_log_in'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
 				<?php foreach($_SESSION['errors_log_in'] as $error): ?>

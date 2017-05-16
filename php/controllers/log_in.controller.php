@@ -13,6 +13,10 @@ if (count($errors)) {
 }
 
 $_SESSION['logUser'] = $_POST['logUser'];
+if (isset($_POST['rememberMe'])){
+	$_SESSION['rememberMe'] = $_POST['rememberMe'];
+	$_SESSION['username'] = $_POST['username'];
+}
 
 header('Location: ../main.php');
 exit;
