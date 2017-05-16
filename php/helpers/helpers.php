@@ -139,7 +139,8 @@
 
 	function getUserByUsername($username){
 		$users = getUsers();
-		foreach ($users as $user) {
+		$username = strtolower($username);
+		foreach ((array)$users as $user) {
 			if ($user['username'] == $username) {
 				return $user;
 			}
