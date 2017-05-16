@@ -1,5 +1,5 @@
 <header>
-
+	<?php  ?>
 	<?php if (!isset($_SESSION['logUser'])): ?>
 		<nav class="nav_menu">
 			<!-- mm = menu mobile -->
@@ -48,6 +48,7 @@
 			<!-- marca del usuario -->
 			<div class="container_user">
 				<a href="profile.php"><img class="user_img" src="<?php echo $user_img; ?>" alt="Avatar del usuario"></a>
+				<label><p> <?php echo ($_SESSION['username'] ); ?>	</p></label>		<!-- CAMBIAR ACA EL USERNAME PARA Q SE VEA EL AVATAR, VER SI HAY Q TRAER LOS HELPERS O DE DONDE TRAIGO LOS DATOS PARA PODES USAR EL $_POST[username] o algo asi -->
 			</div>
 
 			<!-- mh = menu hamburguesa -->
