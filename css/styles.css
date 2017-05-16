@@ -366,6 +366,16 @@ Register
   font-size: 1.4vw;
 }
 
+.containerAvatar{
+  width: 50%;
+  float: left;
+  margin: 3%;
+  margin-left: 7%;
+  text-align: left;
+  border: 1px;
+  padding: 1%;
+}
+
 /*====
 Register errors
 ================*/

@@ -19,6 +19,20 @@ if (count($errors)) {
 	exit();
 }
 
+//Avatar
+if ($_FILES['avatar']['error'] == UPLOAD_ERR_OK ) {
+	//origen
+	$origen = $_FILES['avatar']['tmp_name'];
+
+	//destino
+	$ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+	$imageName = uniqid() . '.' . $ext;
+	$destino = __DIR__ . '/../../img/avatars/' . $imageName;
+
+	//subir imagen
+	move_uploaded_file(($origen), $destino);
+}
+
 
 saveuser();
 header('Location: ../log_in.php');

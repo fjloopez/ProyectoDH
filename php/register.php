@@ -21,7 +21,8 @@
 		<?php if (isset($_SESSION['errors_register'])): ?>	<!-- abre el chequeo de errores -->	
 			<div class="alert">
 				<ul>
-				<?php foreach($_SESSION['errors_register'] as $error): ?>
+				<?php foreach((array)$_SESSION['errors_register'] as $error): ?>	
+						<!-- sin el "array" tiraba error de argumento invalido en el foreach -->
 					<li><?php echo $error; ?></li>
 				<?php endforeach; ?>
 				<?php  
@@ -77,6 +78,11 @@
 				<label><input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> > Hombre</label><br>
 				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> > Mujer</label><br>
 				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> > Prefiero no decirlo</label><br>
+
+				<div class="containerAvatar">
+					<label for="avatar">Avatar</label>
+					<input type="file" name="avatar">
+				</div>
 
 				<button class="buttonRegistro" align="center" type="submit">Enviar</button>
 				<button class="buttonRegistro" type="reset">Borrar</button>
