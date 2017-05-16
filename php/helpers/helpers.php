@@ -207,7 +207,7 @@
 	}
 
 
-	function generateRandonPassword($l = 8) {
+	function generateRandomPassword($l = 8) {
     	return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 	}
 

@@ -12,7 +12,7 @@ if (validUsername()){
 	} else {
 		$to = $user['email'];
 		$subject = 'Cambio de contraseña';
-		$newPassword = generateRandmonPassword();
+		$newPassword = generateRandomPassword();
 		$message = 'Su nueva contraseña es: ' . $newPassword;
 		mail($to, $subject, $message);
 		changePassword($user['username'],$newPassword);

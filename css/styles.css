@@ -138,6 +138,12 @@ Imagen personaje
   float: left;
 }
 
+/*Ya logueado*/
+.user_img{
+  width: 25%;
+  border-radius: 50px;
+}
+
 
 /*====
 Slider
@@ -436,7 +442,7 @@ Mobile
     display: block;
     float: left;
     padding-left: 25%;
-    padding-top: 8%;
+    padding-top: 15px;
     
   }
 
@@ -537,4 +543,8 @@ input[type=text], input[type=password], input[type=email], input[type=date], inp
 
 }
 
-
+/*Ya logueado*/
+.user_img{
+  width: 60px;
+  float: right;
+}

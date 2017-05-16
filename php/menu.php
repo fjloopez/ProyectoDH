@@ -33,7 +33,7 @@
 		<!-- asigna a user_image el path al avatar del usuario en caso de estar seteado si no setea el default -->
 		<?php 
 			if (!isset($_SESSION['user_img'])){
-				$user_img = 'default/path.png';
+				$user_img = '../img/avatars/defaultAvatar.png';
 			} else{
 				$user_img = $_SESSION['user_img'];
 			}
