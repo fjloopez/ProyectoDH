@@ -1,6 +1,7 @@
 <?php include 'head.php' ?>
 <?php  
 	$username = '';
+	$checked = '';
 ?>
 <body>
 	<div class='container'> <!-- abre container principal-->
@@ -29,6 +30,7 @@
 				<?php  
 					if (!isset($_SESSION['errors_log_in']['notvalid'])){
 						$username = $_SESSION['username'];
+						$checked = 'checked';
 					}					
 				?>
 			</div>
@@ -46,7 +48,7 @@
 
 			    	<button class="buttonLogin" type="submit">Login</button><br>
 			  		<span class="rememberMe">
-			  			<input type="checkbox" name="rememberMe" id="rememberMe"> Recuérdame
+			  			<input type="checkbox" checked="<?php echo $checked; ?>" name="rememberMe" id="rememberMe"> Recuérdame
 			 		</span><br>
 			 	</div>
 			</form>
