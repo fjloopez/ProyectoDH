@@ -57,6 +57,7 @@ Menu
   padding: 20px;
   float: left;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .nav_menu .container_mm{
@@ -142,6 +143,19 @@ Imagen personaje
 .user_img{
   width: 25%;
   border-radius: 50px;
+}
+
+.showUsername{
+  margin-top: 2vw;
+  text-align: justify;
+  float: right;
+  height: 5vw;
+  width: 13vw;
+}
+
+.usernameText{
+  text-align: justify;
+  font-size: 1.5vw;
 }
 
 
@@ -442,7 +456,7 @@ Mobile
     display: block;
     float: left;
     padding-left: 25%;
-    padding-top: 15px;
+    padding-top: 5px;
     
   }
 
@@ -455,6 +469,7 @@ Mobile
   }
 
   .img_logo_mm {
+    margin-top: 7px;
     width: 50px;
   }
 
@@ -547,4 +562,5 @@ input[type=text], input[type=password], input[type=email], input[type=date], inp
 .user_img{
   width: 60px;
   float: right;
+  margin-top: 10px;
 }
