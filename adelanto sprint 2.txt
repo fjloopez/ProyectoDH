@@ -1,4 +1,0 @@
-q funciones la register guardando usuarios en un jason
-login validado mostrando los errores pero q queden los valores correctos en pantalla
-
-optativo, q funcione el "me olvide la contraseña"
