@@ -191,9 +191,6 @@
 			'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 			// 'path' => $path
 
-			// $_SESSION['user_img'] usar esto para guardar la img del usuario, se usa en menu de esta forma
-
-
 		];
 
 		//guardo newUser dentro del array de usuarios
