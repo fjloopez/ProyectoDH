@@ -139,6 +139,12 @@ Imagen personaje
   float: left;
 }
 
+/* En Contacto */
+.container_img_contact{
+  width: 29%;  
+  float: left;
+}
+
 /*Ya logueado*/
 .user_img{
   width: 25%;
@@ -340,6 +346,27 @@ span.psw, span.rememberMe {
   color: lightblue;
 }
 
+/*====
+Contacto
+================*/
+
+.container_contact{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;  
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 150px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;
+}
+
+.container_contact a{
+  color: lightblue;
+}
 
 /*====
 Forget password
@@ -519,6 +546,28 @@ Mobile
   }
 
   .container_img_faq{
+    width: 100%;
+  }
+
+  .container_contact{
+    width: 100%;
+  }
+
+  .container_contact h3{
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+
+  .container_contact div {
+    display: block;
+  }
+
+  .container_contact p, .container_contact a{
+    font-size: 2.5vw;
+    line-height: 8vw;
+  }
+
+  .container_img_contact{
     width: 100%;
   }
 
