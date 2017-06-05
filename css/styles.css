@@ -139,8 +139,14 @@ Imagen personaje
   float: left;
 }
 
-/* En Contacto */
+/* En Contact */
 .container_img_contact{
+  width: 29%;  
+  float: left;
+}
+
+/* En Policy */
+.container_img_privacy{
   width: 29%;  
   float: left;
 }
@@ -347,10 +353,10 @@ span.psw, span.rememberMe {
 }
 
 /*====
-Contacto
+Contacto y Politica
 ================*/
 
-.container_contact{
+.container_contact, .container_privacy{
   background-color: #564b41;
   background-size: cover;
   color: white;
@@ -470,7 +476,7 @@ Mobile
   .list_menu li a{
   font-size: 4.5vw;
   line-height: 15vw;
-}
+  }
 
   .nav_menu .container_mm{
     width: 20%;
@@ -549,25 +555,29 @@ Mobile
     width: 100%;
   }
 
-  .container_contact{
+  .container_contact, .container_privacy{
     width: 100%;
   }
 
-  .container_contact h3{
+  .container_contact h3, .container_privacy h3{
     font-size: 3vw;
     line-height: 4vw;
   }
 
-  .container_contact div {
+  .container_contact div, .container_privacy div {
     display: block;
   }
 
-  .container_contact p, .container_contact a{
+  .container_contact p, .container_privacy p, .container_contact a{
     font-size: 2.5vw;
     line-height: 8vw;
   }
 
   .container_img_contact{
+    width: 100%;
+  }
+
+  .container_img_privacy{
     width: 100%;
   }
 
