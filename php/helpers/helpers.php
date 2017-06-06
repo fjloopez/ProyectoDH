@@ -128,7 +128,7 @@
 
 
 	function getUsers (){
-		$users = @file_get_contents('../../users.json');
+		$users = @file_get_contents('../users.json');
 		if (!$users) {
 				$users = [];
 			} else {
