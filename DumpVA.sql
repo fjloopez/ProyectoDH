@@ -181,7 +181,7 @@ CREATE TABLE `user` (
   `username` varchar(12) NOT NULL,
   `email` varchar(20) NOT NULL,
   `birth_date` date NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`)
@@ -258,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-07 12:43:04
+-- Dump completed on 2017-06-07 13:04:10
