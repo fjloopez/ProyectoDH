@@ -19,8 +19,12 @@ try{
 		$surname = $u['surname'];
 		$username = $u['username'];
 		$email = $u['email'];
-		$sql = "INSERT INTO user (name, surname, username, email) VALUES ('$name', '$surname', '$username', '$email')";
+		$birth_date = $u['birth_date'];
+		$password = $u['password'];
 
+		$sql = "INSERT INTO user (name, surname, username, email, birth_date, password) VALUES ('$name', '$surname', '$username', '$email', '$birth_date', '$password')";
+
+		var_dump($sql);
 		$query = $db->prepare($sql);
 		$query->execute();
 	}

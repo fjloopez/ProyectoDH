@@ -180,12 +180,12 @@ CREATE TABLE `user` (
   `surname` varchar(20) NOT NULL,
   `username` varchar(12) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `birth_date` date NOT NULL,
+  `birth_date` varchar(10) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,7 +194,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'FRANCISCO','LOPEZ','flopez','FJLOOPEZ@GMAIL.COM','0000-00-00',''),(2,'Ruy','Barriopedro','ruypo','ruypo00@gmail.com','0000-00-00',''),(3,'jorgito','lopez','jorgito','jsadkn@sdlknf.com','0000-00-00',''),(4,'haha','lala','hala','fjloopez@gmail.com','0000-00-00',''),(5,'mostri','mostreli','mostri','mostri@mostri.com','0000-00-00',''),(6,'jorgelin','damostri','121212121212','afafd@sdgs.com','0000-00-00','');
+INSERT INTO `user` VALUES (133,'FRANCISCO','LOPEZ','flopez','FJLOOPEZ@GMAIL.COM','1990-12-26','$2y$10$4b56o8asyRW8tpczavdVCeCp3UrNTKHZU/txmG51CaTG5bsim226u'),(134,'Ruy','Barriopedro','ruypo','ruypo00@gmail.com','2017-05-11','$2y$10$6dnaEcFbNzR77uVGab/N5uO3nobxKT1/oqljKEcjESa8vHUUGrRx.'),(135,'jorgito','lopez','jorgito','jsadkn@sdlknf.com','2017-05-16','$2y$10$O.oUtW9btuitDu7A052HwOSPZy7lOg.j6WYmuVLgli2VOy5gO2ELW'),(136,'haha','lala','hala','fjloopez@gmail.com','1990-02-04','$2y$10$9f9YCfE3/YfFkn/J1omySOjkCuThYoL8XLd8lr5rmiCcOcJaxrpeW'),(137,'mostri','mostreli','mostri','mostri@mostri.com','2017-05-17','$2y$10$9IGVaG8AfNjjIiZ7cqYDPePQZ2RId8cpCkNny0fOMgDdgI9/fKIcW'),(138,'jorgelin','damostri','121212121212','afafd@sdgs.com','2017-05-17','$2y$10$g92TkwLZN5cldUJ0NGfo9uBOM8bUYP7wf9ifr6mQw/ejfjH7ie3M.');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-07 13:04:10
+-- Dump completed on 2017-06-07 14:31:24
