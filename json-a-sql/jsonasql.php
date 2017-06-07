@@ -7,7 +7,7 @@ $users = getUsers();
 
 echo "<pre>";
 try{
-	$db = new PDO('mysql:host=127.0.0.1;dbname=base_de_datos_peliculas;charset=utf8', 'root','');
+	$db = new PDO('mysql:host=127.0.0.1;dbname=vikingadventures;charset=utf8', 'root','');
 
 	// $query = $db->query('SELECT * FROM actor');
 
@@ -17,7 +17,9 @@ try{
 		var_dump($u);
 		$name = $u['name'];
 		$surname = $u['surname'];
-		$sql = "INSERT INTO actor (nombre, apellido, rating, id_pelicula_preferida) VALUES ('$name', '$surname', '1.5', NULL)";
+		$username = $u['username'];
+		$email = $u['email'];
+		$sql = "INSERT INTO user (name, surname, username, email) VALUES ('$name', '$surname', '$username', '$email')";
 
 		$query = $db->prepare($sql);
 		$query->execute();

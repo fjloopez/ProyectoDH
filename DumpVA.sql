@@ -180,10 +180,12 @@ CREATE TABLE `user` (
   `surname` varchar(20) NOT NULL,
   `username` varchar(12) NOT NULL,
   `email` varchar(20) NOT NULL,
+  `birth_date` date NOT NULL,
+  `password` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -192,6 +194,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'FRANCISCO','LOPEZ','flopez','FJLOOPEZ@GMAIL.COM','0000-00-00',''),(2,'Ruy','Barriopedro','ruypo','ruypo00@gmail.com','0000-00-00',''),(3,'jorgito','lopez','jorgito','jsadkn@sdlknf.com','0000-00-00',''),(4,'haha','lala','hala','fjloopez@gmail.com','0000-00-00',''),(5,'mostri','mostreli','mostri','mostri@mostri.com','0000-00-00',''),(6,'jorgelin','damostri','121212121212','afafd@sdgs.com','0000-00-00','');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -255,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-06 12:29:56
+-- Dump completed on 2017-06-07 12:43:04
