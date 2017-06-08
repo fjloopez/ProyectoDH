@@ -2,7 +2,7 @@
 
 	/*=========================
 		validaciones
-	=========================*/	
+	=========================*/
 	function validateRegister () {
 
 		$errors_register = [];
@@ -13,14 +13,14 @@
 		$nombre = trim($_POST['firstname']);
 		if ($nombre == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre";
-		} elseif (ctype_alpha(str_replace(' ', '', $nombre)) === false) { 
+		} elseif (ctype_alpha(str_replace(' ', '', $nombre)) === false) {
 			//ctype alpha chequea q los caracteres sean del alfabeto (sólo letras)
 			$errors_register[] = "El nombre sólo puede contener letras y espacios" ;
 		} elseif (strlen($nombre) > 30) {
 			$errors_register[] = "El nombre no puede tener más de 30 caracteres" ;
 		}
 
-		
+
 		/*=========================
 			validar apellido
 		=========================*/
@@ -78,7 +78,7 @@
 
 		/*=========================
 			validar fecha de nacimiento
-		=========================*/		
+		=========================*/
 		$birth_date = trim($_POST['birth_date']);
 		if ($birth_date == "") {
 			$errors_register[] = "Te faltó ingresar tu fecha de nacimiento";
@@ -90,7 +90,7 @@
 		$month = $birth_date[1];
 		// toma los valores del array correspondientes al dia
 		$day = $birth_date[2];
-		
+
 		if (!checkdate($month, $day, $year)){
 			$errors_register[] = "La fecha de nacimiento ingresada no es válida";
 		}
@@ -98,7 +98,7 @@
 
 		/*=========================
 			validar genero
-		=========================*/	
+		=========================*/
 		if (!isset($_POST['gender'])) {
 			$errors_register[] = "Te faltó ingresar tu género";
 		}
@@ -113,7 +113,7 @@
 		$username = strtolower(trim($_POST['username']));
 		if (($username == "") || (ctype_alnum(str_replace(' ', '', $username)) === false) || (strlen($username) > 12) || (strlen($username) <4)) {
 			return false;
-		} 
+		}
 		return true;
 	}
 
@@ -121,7 +121,7 @@
 		$password = strtolower(trim($_POST['password']));
 		if (($password == "") || (ctype_alnum(str_replace(' ', '', $password)) === false)) {
 			return false;
-		} 
+		}
 		return true;
 	}
 
@@ -152,7 +152,7 @@
 		$pass = $_POST['password'];
 		$passHash = $user['password'];
 		if (password_verify($pass, $passHash)){
-			return true;	
+			return true;
 		}
 		return false;
 	}
@@ -160,7 +160,7 @@
 
 	function validateLogIn(){
 		$errors_log_in = [];
-		
+
 		if (validUsername() && validPassword()) {
 			$username = strtolower($_POST['username']);
 			$user = getUserByUsername($username);
@@ -173,14 +173,14 @@
 			}
 		} else {
 			$errors_log_in['notvalid'] = "El usuario o contraseña ingresada no es valido. Ingrese los datos nuevamente.";
-		}	
+		}
 		return $errors_log_in;
 	}
 
 	function saveUser(){
 		//users es un array de arrays usuarios
 		$users = getUsers();
-		
+
 		//newUser es un array del tipo usuario
 		$newUser = [
 			'name' => $_POST['firstname'],
@@ -200,7 +200,7 @@
 		$users = json_encode($users);
 
 		//guardarlo en el archivo json
-		file_put_contents('../../users.json', $users);
+		file_put_contents('../../users.json', $users.PHP_EOL, FILE_APPEND);
 	}
 
 
@@ -221,9 +221,3 @@
 		$users = json_encode($users);
 		file_put_contents('../../users.json', $users);
 	}
-
-
-
-
-
-

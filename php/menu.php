@@ -9,29 +9,29 @@
 			<!-- mh = menu hamburguesa -->
 
 
-			<div class="container_desplegable">			
+			<div class="container_desplegable">
 				<div class="container_mh">
-					<a href="#container_menu_list">	
+					<a href="#container_menu_list">
 						<div class="top_mh"></div>
 						<div class="mid_mh"></div>
 						<div class="bot_mh"></div>
 					</a>
-				</div>	
+				</div>
 
 				<div class="container_menu_list" id="container_menu_list">
 					<ul class="list_menu">
-						<li><a href="main.php"><h4>Home</h4></a></li>
-						<li><a href="log_in.php"><h4>Log In</h4></a></li>
-						<li><a href="register.php"><h4>Register</h4></a></li>
+						<li><a href="main.php"><h4>Inicio</h4></a></li>
+						<li><a href="log_in.php"><h4>Ingresa</h4></a></li>
+						<li><a href="register.php"><h4>Registrate</h4></a></li>
 						<li><a href="faq.php"><h4>FAQs</h4></a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	<?php else: ?>
-		
+
 		<!-- asigna a user_image el path al avatar del usuario en caso de estar seteado si no setea el default -->
-		<?php 
+		<?php
 			if (!isset($_SESSION['user_img'])){
 				$user_img = '../img/avatars/defaultAvatar.png';
 			} else{
@@ -49,7 +49,7 @@
 			<div class="container_user">
 				<a href="#"><img class="user_img" src="<?php echo $user_img; ?>" alt="Avatar del usuario"></a> <!-- profile.php -->
 					<div class="showUsername">
-						<label><h4 class="usernameText"> <?php 
+						<label><h4 class="usernameText"> <?php
 							$showUsername = ($_SESSION['username']);
 							if (isset ($_SESSION['username'] )){
 								echo "$showUsername";
@@ -61,21 +61,21 @@
 			</div>
 
 			<!-- mh = menu hamburguesa -->
-			<div class="container_desplegable">			
+			<div class="container_desplegable">
 				<div class="container_mh">
-					<a href="#container_menu_list">	
+					<a href="#container_menu_list">
 						<div class="top_mh"></div>
 						<div class="mid_mh"></div>
 						<div class="bot_mh"></div>
 					</a>
-				</div>	
+				</div>
 
 				<div class="container_menu_list" id="container_menu_list">
 					<ul class="list_menu">
-						<li><a href="main.php"><h4>Home</h4></a></li>
-						<li><a href="#"><h4>Profile</h4></a></li> <!-- href='profile.php' -->
+						<li><a href="main.php"><h4>Inicio</h4></a></li>
+						<li><a href="profile.php"><h4>Perfil</h4></a></li> <!-- href='profile.php' -->
 						<li><a href="faq.php"><h4>FAQs</h4></a></li>
-						<li><a href="log_out.php"><h4>Log Out</h4></a></li>
+						<li><a href="log_out.php"><h4>Cerrar Sesión</h4></a></li>
 					</ul>
 				</div>
 			</div>
