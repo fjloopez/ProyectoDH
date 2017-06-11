@@ -11,7 +11,7 @@
 		</div><!-- cierra container menu -->
 
 
-		<div class="container_login"> <!-- abre container log in -->
+		<div class="container_login"> <!-- abre container log out -->
           
 			<form class="form_login" action="controllers/log_out.controller.php" method="post" enctype="multipart/form-data">
 			  	<div class="container_form">
@@ -20,7 +20,7 @@
 			 	</div>
 			</form>
           
-     	</div><!-- cierra container log in -->
+     	</div><!-- cierra container log out -->
 
 
 
