@@ -1,9 +1,5 @@
 <?php
 
-/**
-* creado por alcebohín
-* 12/06/2017
-*/
 
 require_once '/DBFactory.php';
 
