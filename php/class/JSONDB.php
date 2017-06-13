@@ -25,7 +25,7 @@ class JSONDB{
 
 	public function save($table, $model)
 	{
-		
+		//optativo
 	}
 
 	private function insert($table, $model)

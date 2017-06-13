@@ -33,3 +33,12 @@ try{
 }
 
 $db = NULL;
+
+
+/*   SCRIPT PARA CREAR TABLA (basica con id y una columna varchar)
+CREATE TABLE `vikingadventures`.`new_table` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `column` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+*/
