@@ -10,7 +10,7 @@
 		/*=========================
 			validar nombre
 		=========================*/
-		$nombre = trim($_POST['firstname']);
+		$nombre = trim($_POST['name']);
 		if ($nombre == "") {
 			$errors_register[] = "Te faltó ingresar tu nombre";
 		} elseif (ctype_alpha(str_replace(' ', '', $nombre)) === false) {
@@ -194,7 +194,7 @@
 
 		//newUser es un array del tipo usuario
 		$newUser = [
-			'name' => $_POST['firstname'],
+			'name' => $_POST['name'],
 			'surname' => $_POST['surname'],
 			'email' => $_POST['email'],
 			'birth_date' => $_POST['birth_date'],

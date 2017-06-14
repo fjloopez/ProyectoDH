@@ -6,15 +6,15 @@ require_once 'Model.php';
 
 class User extends Model {
 
-	private $name;
-	private $surname;
-	private $username;
-	private $email;
-	private $birthDate;
-	private $gender;
-	private $password;
+	public $name;
+	public $surname;
+	public $username;
+	public $email;
+	public $birth_date;
+	public $gender;
+	public $password;
 
-	public $fillable = ['name', 'surname', 'username', 'email', 'birthDate', 'gender', 'password'];
+	public $fillable = ['name', 'surname', 'username', 'email', 'birth_date', 'gender', 'password'];
 	public static $table = 'user';
 
 

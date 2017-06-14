@@ -1,9 +1,8 @@
 <?php
 
-
-
-class DBFactory{
-	public static $db_type;
+class DBFactory {
+	
+	public static $db_type; 
 
 	public static function getDB()
 	{

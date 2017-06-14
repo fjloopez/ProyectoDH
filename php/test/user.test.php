@@ -8,4 +8,6 @@ $user->saveUser();
 
 echo '<pre>';
 
-// var_dump($user);
+var_dump($user);
+
+exit();

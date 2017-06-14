@@ -42,7 +42,7 @@
 			<form action="controllers/register.controller.php" method="post" class="register" enctype="multipart/form-data">
 				<label for="nombreyapellido">Nombre y Apellido</label>
 				<br>
-				<input type="text" name="firstname" placeholder= "Nombre" value="<?php echo $nameValue; ?>" required id="nombreyapellido"> 
+				<input type="text" name="name" placeholder= "Nombre" value="<?php echo $nameValue; ?>" required id="nombreyapellido"> 
 
 				<input type="text" name="surname" placeholder="Apellido" value="<?php echo $surnameValue; ?>" required>
 				<br>

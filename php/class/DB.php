@@ -1,6 +1,5 @@
 <?php
 
-
 class DB {
 
     private static $conn;
@@ -9,7 +8,7 @@ class DB {
     {
         if(!self::$conn){
             $db = new PDO('mysql:host=127.0.0.1;dbname=vikingadventures;charset=utf8','root','');
-    		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$conn = $db;
         }
         return self::$conn;
