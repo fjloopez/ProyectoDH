@@ -128,20 +128,30 @@
 
 
 	function getUsers (){
-		$users = @file_get_contents('../users.json');
-		if (!$users) {
-				$users = [];
-			} else {
-				$users = json_decode($users, true);
-			}
+		// $users = @file_get_contents('../users.json');
+		// if (!$users) {
+		// 		$users = [];
+		// 	} else {
+		// 		$users = json_decode($users, true);
+		// 	}
+		// var_dump($users);exit();
+		// return $users;
+		 $db = new PDO('mysql:host=127.0.0.1;dbname=vikingadventures;charset=utf8', 'root','');
+
+		$query = $db->query('SELECT * FROM user');
+		$users = $query->fetchAll(PDO::FETCH_ASSOC);
+
+		// echo "<pre>";var_dump($users);exit();
 		return $users;
 	}
 
 	function getUserByUsername($username){
 		$users = getUsers();
+		// echo "<pre>";var_dump($users);exit();
 		$username = strtolower($username);
 		foreach ((array)$users as $user) {
 			if ($user['username'] == $username) {
+				// echo "<pre>";var_dump($user);exit();
 				return $user;
 			}
 		}
@@ -164,6 +174,7 @@
 		if (validUsername() && validPassword()) {
 			$username = strtolower($_POST['username']);
 			$user = getUserByUsername($username);
+			// echo "<pre>";var_dump($user);exit();
 			if (!$user){
 				$errors_log_in[] = "El nombre de usuario ingresado es incorrecto.";
 			} elseif (!checkPassword($user)){

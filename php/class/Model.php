@@ -1,7 +1,7 @@
 <?php
 
 
-require_once '/DBFactory.php';
+require_once 'DBFactory.php';
 
 class Model {
 
@@ -18,12 +18,12 @@ class Model {
 
 	public function toModel($data)
 	{
-		if(isset($data['id'])) $this->id = $data['id'] 
-			foreach ($data as $key => $value) {
-				if (in_array($key, $this->fillable)) {
-				$this->$key => $value;
-				}
-			} 
+		if(isset($data['id'])) $this->id = $data['id'];
+		foreach ($data as $key => $value) {
+			if (in_array($key, $this->fillable)) {
+				$this->$key = $value;
+			}
+		} 
 	}
 
 	public function save(){

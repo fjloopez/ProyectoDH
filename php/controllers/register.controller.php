@@ -38,7 +38,7 @@ if ($_FILES['avatar']['error'] == UPLOAD_ERR_OK ) {
 
 $user = new User($_POST['firstname'], $_POST['surname'], $_POST['username'], $_POST['email'], $_POST['birth_date'], $_POST['gender'], $_POST['password']);
 
-$user->saveUser();
+$user->save();
 
 exit;
 
