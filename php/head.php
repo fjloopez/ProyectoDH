@@ -1,5 +1,13 @@
 <?php session_start(); ?>
-<?php 
+<?php
+
+
+//    require_once 'class/MySQLDB.php';
+//    require_once 'class/JSONDB.php';
+//    require_once 'class/DBFactory.php';
+//
+//    DBFactory::$db_type = 'MySQLDB';
+
 	if (isset($_SESSION['rememberMe'])){
 	setcookie("rememberMe",$_SESSION['username'],time()+99999);
 }

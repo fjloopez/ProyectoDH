@@ -37,6 +37,6 @@ class Model {
 		return DBFactory::getDB()->save(static::$table, $this); 
 	}
 
-	
+
 
 }

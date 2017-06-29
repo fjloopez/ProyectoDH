@@ -2,7 +2,14 @@
 
 session_start();
 include('../helpers/helpers.php');
-include('../class/User.php');
+include('../class/Usuario.php');
+
+require_once '../class/MySQLDB.php';
+require_once '../class/JSONDB.php';
+require_once '../class/DBFactory.php';
+
+DBFactory::$db_type = 'MySQLDB';
+
 
 
 
@@ -39,13 +46,11 @@ if (count($errors)) {
 
 // $user = new User($_POST['firstname'], $_POST['surname'], $_POST['username'], $_POST['email'], $_POST['birth_date'], $_POST['gender'], $_POST['password']);
 
-$user = new User($_POST);
+$user = new Usuario($_POST);
 
 // echo"<pre>";var_dump($user);exit();
 
 $user->save();
-
-exit();
 
 header('Location: ../log_in.php');
 

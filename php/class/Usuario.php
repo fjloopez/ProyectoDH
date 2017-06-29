@@ -1,14 +1,22 @@
 <?php
 
-//usuario.test
 
-require_once 'JSONDB.php';						//estos son los q se cambian
-require_once '/DBFactory.php';
-require_once '/User.php';
+require_once 'DB.php';
+require_once 'Model.php';
 
-DBFactory::$db_type = 'JSONDB';					//estos son los q se cambian
+class Usuario extends Model {
+
+    public $id;
+	public $name;
+	public $surname;
+	public $username;
+	public $email;
+	public $birth_date;
+	public $gender;
+	public $password;
+
+	public $fillable = ['name', 'surname', 'username', 'email', 'birth_date', 'gender', 'password'];
+	public static $table = 'user';
 
 
-$user = User::find(3);
-$user->name = 'jorgito';
-$user->save();
+}

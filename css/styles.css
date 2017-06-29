@@ -22,9 +22,8 @@ body{
 
 .container {
   padding: 40px;
-  background-color: lightblue;
   overflow: hidden;
-  background-image: url(../img/fondo.jpg);
+  background: lightblue url(../img/fondo.jpg);
   background-size: cover;
 
 }
@@ -69,7 +68,7 @@ Menu
 }
 
 .list_menu li a{
-  font-style: none;
+  /*font-style: none;*/
   color: white;
   font-size: 1.4vw;
   line-height: 4vw;
@@ -258,7 +257,7 @@ FAQ
 
 
 .container_faq a{
-  font-style: none;
+  /*font-style: none;*/
   color: white;
   font-size: 1.4vw;
   line-height: 4vw;
@@ -460,39 +459,38 @@ Mobile
 ==============================================================*/
 
 @media only screen and (max-width : 480px) {
-  .container{
+  .container {
     padding: 5px;
   }
 
-  .container_menu{
+  .container_menu {
     width: 100%;
     margin-top: 0px;
     background-color: transparent;
     font-size: 3vw;
   }
 
-
-  .container_desplegable .container_menu_list{
+  .container_desplegable .container_menu_list {
     clear: both;
     display: none;
   }
 
-  .container_desplegable div:target{
+  .container_desplegable div:target {
     display: block;
   }
 
-  .list_menu li a{
-  font-size: 4.5vw;
-  line-height: 15vw;
+  .list_menu li a {
+    font-size: 4.5vw;
+    line-height: 15vw;
   }
 
-  .nav_menu .container_mm{
+  .nav_menu .container_mm {
     width: 20%;
     display: block;
     float: left;
   }
 
-  .nav_menu .container_mh{
+  .nav_menu .container_mh {
     width: 49%;
     display: block;
     float: left;
@@ -501,7 +499,7 @@ Mobile
 
   }
 
-  .nav_menu .container_mh div{
+  .nav_menu .container_mh div {
     width: 35px;
     height: 6px;
     background-color: #e9d401;
@@ -514,39 +512,39 @@ Mobile
     width: 50px;
   }
 
-  .container_play{
+  .container_play {
     width: 100%;
     text-align: center;
   }
 
-  .container_play_button{
+  .container_play_button {
     opacity: 1;
     position: relative;
     width: 100%;
     margin-bottom: 11px;
     top: 0;
     left: 0;
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
 
-  .play_button{
-    border:1px #e9d401 solid;
+  .play_button {
+    border: 1px #e9d401 solid;
     font-size: 5vw;
   }
 
-  .img_logo{
+  .img_logo {
     display: none;
   }
 
-  .slider{
+  .slider {
     margin-bottom: 0px;
   }
 
-  .container_faq{
+  .container_faq {
     width: 100%;
   }
 
-  .container_faq a h3{
+  .container_faq a h3 {
     font-size: 3vw;
   }
 
@@ -554,20 +552,20 @@ Mobile
     display: block;
   }
 
-  .container_faq div p{
+  .container_faq div p {
     font-size: 2.5vw;
     line-height: 4vw;
   }
 
-  .container_img_faq{
+  .container_img_faq {
     width: 100%;
   }
 
-  .container_contact, .container_privacy{
+  .container_contact, .container_privacy {
     width: 100%;
   }
 
-  .container_contact h3, .container_privacy h3{
+  .container_contact h3, .container_privacy h3 {
     font-size: 3vw;
     line-height: 4vw;
   }
@@ -576,24 +574,24 @@ Mobile
     display: block;
   }
 
-  .container_contact p, .container_privacy p, .container_contact a{
+  .container_contact p, .container_privacy p, .container_contact a {
     font-size: 2.5vw;
     line-height: 8vw;
   }
 
-  .container_img_contact{
+  .container_img_contact {
     width: 100%;
   }
 
-  .container_img_privacy{
+  .container_img_privacy {
     width: 100%;
   }
 
-  .container_login{
+  .container_login {
     width: 100%;
   }
 
-  .container_img_login{
+  .container_img_login {
     width: 100%;
   }
 
@@ -602,7 +600,7 @@ Mobile
 
   }
 
-  .container_register{
+  .container_register {
     width: 100%;
   }
 
@@ -611,23 +609,24 @@ Mobile
 
   }
 
-  .container_register{
+  .container_register {
     width: 100%;
     font-size: 3vw;
   }
 
-  .container_register input{
-  font-size: 2.5vw;
-}
+  .container_register input {
+    font-size: 2.5vw;
+  }
 
-input[type=text], input[type=password], input[type=email], input[type=date], input[type=username]  {
+  input[type=text], input[type=password], input[type=email], input[type=date], input[type=username] {
     width: 100%;
 
-}
+  }
 
-/*Ya logueado*/
-.user_img{
-  width: 60px;
-  float: right;
-  margin-top: 10px;
+  /*Ya logueado*/
+  .user_img {
+    width: 60px;
+    float: right;
+    margin-top: 10px;
+  }
 }

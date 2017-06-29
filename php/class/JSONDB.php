@@ -17,10 +17,6 @@ class JSONDB{
 			}
 			return null;
 		}
-
-		
-	 
-
 	}
 
 	public function save($table, $model)
