@@ -12,7 +12,7 @@
     
     <div class='container'> <!-- abre container principal-->
 
-      <button class="tema">theme</button>
+      <button class="themeButton">theme</button>
       
       <div class="container_logo"> <!-- abre container del logo -->
           <a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a> 
@@ -54,7 +54,7 @@
     <script type="text/javascript">
       window.onload = function(){
         var estilos = document.querySelector(".estilos");
-        var btn = document.querySelector(".tema");
+        var btn = document.querySelector(".themeButton");
 
         var isClicked = false;
         btn.onclick = function(){

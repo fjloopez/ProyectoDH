@@ -23,7 +23,6 @@ body{
 .container {
   padding: 40px;
   overflow: hidden;
-  background: lightblue url(../img/fondo.jpg);
   background-size: cover;
 
 }
@@ -44,6 +43,19 @@ Logo
   width: 30%;
 }
 
+/*====
+Temas
+================*/
+.themeButton{
+  background-color: #988e88;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 9%;
+  float: right;
+}
 
 /*====
 Menu
