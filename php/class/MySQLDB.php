@@ -44,4 +44,15 @@ class MySQLDB{
 		$set = trim($set, ", ");
 		return "UPDATE ".$table." SET $set WHERE id = ".$model->id;
 	}
+
+
+	public static function countUsers ($table, $model){
+        $sql = 'SELECT COUNT(*) FROM '.$table;
+        $stmt = DB::getConn()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
+        return $result;
+    }
+
+
 }

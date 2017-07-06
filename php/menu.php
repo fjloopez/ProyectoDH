@@ -1,5 +1,6 @@
 <header>
 
+
 	<?php if (!isset($_SESSION['logUser'])): ?>
 		<nav class="nav_menu">
 			<!-- mm = menu mobile -->
@@ -19,12 +20,15 @@
 				</div>
 
 				<div class="container_menu_list" id="container_menu_list">
-					<ul class="list_menu">
-						<li><a href="main.php"><h4>Inicio</h4></a></li>
-						<li><a href="log_in.php"><h4>Ingresa</h4></a></li>
-						<li><a href="register.php"><h4>Registrate</h4></a></li>
-						<li><a href="faq.php"><h4>FAQs</h4></a></li>
-					</ul>
+                    <form>
+                        <ul class="list_menu">
+                            <li><a href="main.php"><h4>Inicio</h4></a></li>
+                            <li><a href="log_in.php"><h4>Ingresa</h4></a></li>
+                            <li><a href="register.php"><h4>Registrate</h4></a></li>
+                            <li><a href="faq.php"><h4>FAQs</h4></a></li>
+                            <li>Ya somos <a id="userCount"></a> vikingos</li>
+                        </ul>
+                    </form>
 				</div>
 			</div>
 		</nav>
@@ -71,16 +75,42 @@
 				</div>
 
 				<div class="container_menu_list" id="container_menu_list">
-					<ul class="list_menu">
-						<li><a href="main.php"><h4>Inicio</h4></a></li>
-						<li><a href="profile.php"><h4>Perfil</h4></a></li> <!-- href='profile.php' -->
-						<li><a href="faq.php"><h4>FAQs</h4></a></li>
-						<li><a href="log_out.php"><h4>Cerrar Sesión</h4></a></li>
-					</ul>
+                    <form>
+                        <ul class="list_menu">
+                            <li><a href="main.php"><h4>Inicio</h4></a></li>
+                            <li><a href="profile.php"><h4>Perfil</h4></a></li> <!-- href='profile.php' -->
+                            <li><a href="faq.php"><h4>FAQs</h4></a></li>
+                            <li><a href="log_out.php"><h4>Cerrar Sesión</h4></a></li>
+                            <li>Ya somos <a id="userCount"></a> vikingos</li>
+                        </ul>
+                    </form>
 				</div>
 			</div>
 		</nav>
 
 	<?php endif; ?>
 
+    <script>
+        countUsers();
+        var users = setInterval(function(){ countUsers() }, 30000);
+
+
+        function countUsers() {
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("userCount").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET","controllers/user.controller.php?q",true);
+            xmlhttp.send();
+        }
+    </script>
 </header>
+
