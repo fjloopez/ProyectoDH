@@ -34,21 +34,30 @@
       </div><!-- cierra container play -->
       
       <div class="slider">
-          <img class="img_slider1" src="..\img\howdy.jpg">
+          <div id="slider">
+              <div class="container_slider">
+                  <img class="img_slider1" src="http://lorempixel.com/900/600/sports" /><!--
+        --><img class="img_slider1" src="http://lorempixel.com/900/600/city" /><!--
+        --><img class="img_slider1" src="http://lorempixel.com/900/600/cats" /><!--
+        --><img class="img_slider1" src="http://lorempixel.com/900/600/food" /><!--
+        --><img class="img_slider1" src="http://lorempixel.com/900/600/people" />
+              </div>
+          </div>
+
+          <button type="button" class="left">&lt;</button>
+          <button type="button" class="right">&gt;</button>
       </div>
 
-      
-      
         
     <div class="container_footer">
             <?php include "footer.php" ?>
     </div>
     
     </div> <!-- cierra container principal-->
-    
 
-    
 
-  
+
+
+    <script src="slider.js"></script>
   </body>
 </html>
