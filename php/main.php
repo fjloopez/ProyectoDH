@@ -38,16 +38,15 @@
       <div class="slider">
           <div id="slider">
               <div class="container_slider">
-                  <img class="img_slider1" src="http://lorempixel.com/900/600/sports" /><!--
-        --><img class="img_slider1" src="http://lorempixel.com/900/600/city" /><!--
-        --><img class="img_slider1" src="http://lorempixel.com/900/600/cats" /><!--
-        --><img class="img_slider1" src="http://lorempixel.com/900/600/food" /><!--
-        --><img class="img_slider1" src="http://lorempixel.com/900/600/people" />
+                  <img class="slider_img" src="http://lorempixel.com/900/600/sports" /><!--
+                --><img class="slider_img" src="http://lorempixel.com/900/600/city" /><!--
+                --><img class="slider_img" src="http://lorempixel.com/900/600/cats" /><!--
+                --><img class="slider_img" src="http://lorempixel.com/900/600/food" /><!--
+                --><img class="slider_img" src="http://lorempixel.com/900/600/people" />
               </div>
           </div>
-
-          <button type="button" class="left">&lt;</button>
-          <button type="button" class="right">&gt;</button>
+          <button type="button" class="left" onclick="plusDivs(-1)">&#10094;</button>
+          <button type="button" class="right" onclick="plusDivs(-1)">&#10095;</button>
       </div>
 
         
@@ -58,6 +57,26 @@
     </div> <!-- cierra container principal-->
 
 
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slider_img");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
 
 
     <script type="text/javascript">
@@ -65,7 +84,7 @@
         var estilos = document.querySelector(".estilos");
         var btn = document.querySelector(".themeButton");
 
-    <script src="slider.js"></script>
+
         var isClicked = false;
         btn.onclick = function(){
           isClicked = !isClicked;

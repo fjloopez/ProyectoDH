@@ -187,34 +187,42 @@ Slider
 ================*/
 
 .slider {
-
-  background-color: #564b41;   /*borrar al poner las img originales*/
-  clear: both;
-  margin-bottom: 30px;
-  text-align: center;
-  width: 900px;
-  height: 600px;
-  /*overflow: hidden;*/
+    clear: both;
+    background-color: #564b41;   /*borrar al poner las img originales*/
 }
+
+
 .slider #slider{
-  overflow: hidden;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
 }
 
 #slider {
-  position: relative;
-  width: 900px;
-  height: 600px;
-  /*overflow: hidden;*/
+    margin-left: 22vw;
+    position: relative;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
 }
 
 #slider .container_slider {
-  position: absolute;
-  white-space: nowrap;
-  transition: all 1s;
+    position: absolute;
+    margin-top: 30px;
+    white-space: nowrap;
+    transition: all 1s;
 }
 
 #slider .container_slider img {
-  margin: 0;
+    margin: 0;
+}
+
+.left {
+}
+
+.right {
 }
 
 
