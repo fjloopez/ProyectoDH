@@ -47,7 +47,7 @@
           </div>
           <div class="container_slider_buttons">
               <button type="button" class="left" onclick="plusDivs(-1)">&#10094;</button>
-              <button type="button" class="right" onclick="plusDivs(-1)">&#10095;</button>
+              <button type="button" class="right" onclick="plusDivs(1)">&#10095;</button>
           </div>
       </div>
 
