@@ -219,10 +219,17 @@ Slider
     margin: 0;
 }
 
+.container_slider_buttons{
+  text-align: center;
+}
+
 .left {
+  margin-left: 50px;
+  width: 25%;
 }
 
 .right {
+  width: 25%;
 }
 
 
