@@ -1,19 +1,27 @@
 <?php include 'head.php' ?>
 <?php 
+
       if (!isset($_SESSION['logUser'])){
         $play_button = 'log_in.php';
       } else{
         $play_button = '#';
         // $play_button = 'game.php';
       }
-    ?>
+
+
+      if(!isset($_SESSION["theme"])){
+        $themeId = "inside";
+      }else{
+        $themeId = $_SESSION["theme"];
+      }
+?>
 
   <body>
     
     <div class='container'> <!-- abre container principal-->
-
-      <button class="themeButton">theme</button>
-
+      <form>
+        <button id="<?php echo $themeId; ?>" class="themeButton"><?php echo $themeId; ?></button>
+      </form>
       <div class="container_logo"> <!-- abre container del logo -->
           <a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a> 
       </div> <!-- cierra container del logo -->
@@ -88,9 +96,30 @@
 
 
         var isClicked = false;
-        btn.onclick = function(){
+        btn.onclick = function(e){
+          e.preventDefault();
           isClicked = !isClicked;
-         (isClicked == true) ? estilos.href="../css/stylesOutside.css" : estilos.href="../css/stylesInside.css";
+          isClicked == true ? estilos.href="../css/stylesOutside.css" : estilos.href="../css/stylesInside.css";
+          if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+          } else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          if (this.id === "inside"){
+            this.id = "outside"
+          }else{
+            this.id = "inside"
+          }
+          console.log(this.id)
+          xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                  document.querySelector(".themeButton").innerHTML = JSON.parse(this.responseText);
+              }
+          };
+          xmlhttp.open("GET","controllers/theme.controller.php?q="+this.id,true);
+          xmlhttp.send();
         }
       }
 
