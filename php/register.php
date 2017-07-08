@@ -41,38 +41,45 @@
 
 
 		<div class="container_register"> <!-- abre container register -->
-			<form action="controllers/register.controller.php" method="post" class="register" enctype="multipart/form-data">
+			<form id="formJS" action="controllers/register.controller.php" method="post" class="register" enctype="multipart/form-data">
 				<label for="nombreyapellido">Nombre y Apellido</label>
 				<br>
-				<input type="text" name="name" placeholder= "Nombre" value="<?php echo $nameValue; ?>" required id="nombreyapellido"> 
+				<input type="text" name="name" placeholder= "Nombre" value="<?php echo $nameValue; ?>" required id="nombreyapellido">
+				<span class="errName"></span>
 
 				<input type="text" name="surname" placeholder="Apellido" value="<?php echo $surnameValue; ?>" required>
 				<br>
+				<span class="errSurn"></span>
 
 				<label for="username"> Nombre de Usuario </label>
 				<br>
 				<input type="text" name="username" placeholder="Usuario" value="<?php echo $usernameValue; ?>" required id="username">
 				<br>
+				<span class="errUser"></span>
 
 				<label for="mail">Correo Electrónico </label>
 				<br>
 				<input type="email" name="email" placeholder="Correo Electrónico" value="<?php echo $emailValue; ?>" required id="mail">
 				<br>
+				<span class="errEmail"></span>
 
 				<label for="password"> Creá tu Contraseña </label>
 				<br>
 				<input type="password" name="password" placeholder="Contraseña" required id="password">
 				<br>
+				<span class="errPass"></span>
 
 				<label for="checkpassword"> Confirmá Contraseña </label>
 				<br>
 				<input type="password" name="checkpassword" placeholder="Confirmar Contraseña" required id="checkpassword">
 				<br>
+				<span class="errCheck"></span>
 
 				<label for="birth_date">Fecha de Nacimiento </label>
 				<br>
 				<input type="date" name="birth_date" value="<?php echo $birth_date; ?>" required>
 				<br>
+				<span class="errBirth"></span>
 
 				<label> Género</label>
 				<br>
@@ -80,13 +87,14 @@
 				<label><input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> > Hombre</label><br>
 				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> > Mujer</label><br>
 				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> > Prefiero no decirlo</label><br>
+				<span class="errGender"></span>
 
 				<div class="containerAvatar">
 					<label for="avatar">Avatar</label>
 					<input type="file" name="avatar">
 				</div>
 
-				<button class="buttonRegistro" align="center" type="submit">Enviar</button>
+				<button id="submit" class="buttonRegistro" align="center" type="submit">Enviar</button>
 				<button class="buttonRegistro" type="reset">Borrar</button>
 				
 			</form>
@@ -110,6 +118,110 @@
 		</div>
 
 	</div> <!-- cierra container principal-->
+
+	<script type="text/javascript">
+
+		window.addEventListener("load", doAll);
+
+
+	        function doAll(){
+	            var form = document.getElementById("formJS");
+
+
+	            var name = form.name;
+	            var surname = form.surname;
+	            var username = form.username;
+	            var email = form.email;
+	            var pass = form.password;
+	            var check = form.checkpassword;
+	            var birth = form.birth_date;
+	            var genderM = form.genderM;
+	            var genderF = form.genderF;
+	            var genderO = form.genderO;
+
+
+	            button = document.getElementById("submit");
+
+
+
+
+	            function validate(){
+	                var errors = {};
+
+	                if (name.length == '') {
+	                    errors.errName = "El nombre es obligatorio";
+	                }           // property
+
+	                if (surname.value == '') {
+	                    errors.errSurn = "El pellido es obligatorio";
+	                }
+
+	                if (username.value == '') {
+	                    errors.errUser = "Nombra a tu vikingo!";
+	                }
+
+	                if (email.value == '') {
+	                    errors.errEmail = "El mail es obligatorio";
+	                }       // property
+
+	                if (pass.value == '') {
+	                    errors.errPass = "Olvidó poner su contraseña";
+	                }
+
+	                if (check.value == '') {
+	                    errors.errCheck = "Confirmar contraseña";
+	                }
+
+	                if (birth.value == '') {
+	                   errors.errBirth = "Debe completar su fecha de nacimiento";
+	                }               
+
+	                if (genderM.value.checked == true || genderF.value.checked == true || genderO.value.checked == true) {
+	                } else  {
+	                    errors.errGender = "Debe seleccionar un género (aunque prefiera no aclararlo)"
+	                }     // property
+
+	                return errors;
+
+	            }
+
+
+	            
+
+
+
+	  			form.addEventListener("submit", function(e){
+	  				e.preventDefault();
+	  				console.log(e);
+
+	  				var errores = validate();
+	  				
+	  	
+	  				if(Object.keys(errores).length 	> 0){
+	  					for(var property in errors){	//"." porque es class (como en css) busco la class
+	  						var span = document.querySelector("."+property);
+							span.innerText = errores[property];
+												//valor
+						}
+	  				}
+	  			});   
+	            
+
+	//              function isValid(){
+	//              var xmlhttp = new XMLHttpRequest();
+	//                  xmlhttp.onreadystatechange = function {
+	//                      if (this.readyState == 4 && this.status == 200) {
+	//                          document.querySelector("submit").innerHTML = JSON.parse(this.responseText);
+	//                      }
+	//
+	//              };
+	//              xmlhttp.open("POST", "controllers/register.controller.php", true);
+	//              xmlhttp.send();
+	//              }
+	        }
+
+	</script>
+
 </body>
 </html>
 
