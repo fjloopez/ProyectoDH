@@ -47,14 +47,17 @@ Logo
 Temas
 ================*/
 .themeButton{
-  background-color: #988e88;
+  /*background-color: #988e88;*/
+  background-color: transparent;
+  border: 2px solid white;
   color: white;
-  padding: 14px 20px;
+  /*padding: 14px 20px;*/
   margin: 8px 0;
-  border: none;
+  text-align: center;
   cursor: pointer;
-  width: 9%;
+  width: 13%;
   float: right;
+  font-size: 1.4vw;
 }
 
 /*====

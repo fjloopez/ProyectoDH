@@ -3,5 +3,11 @@
 }
 
 *{
-	color: lightgreen;
+	color: #c2540a;
+}
+
+.list_menu li,
+.list_menu li a{
+    color: #c2540a;
+    font-weight: bold;
 }
