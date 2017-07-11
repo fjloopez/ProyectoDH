@@ -14,6 +14,7 @@ DBFactory::$db_type = 'MySQLDB';
 
 
 $errors = validateRegister();
+//echo"<pre>";var_dump($_POST);exit();
 // echo"<pre>";var_dump($errors);exit();
 
 if (count($errors)) {

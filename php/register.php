@@ -84,9 +84,9 @@
 				<label> Género</label>
 				<br>
 
-				<label><input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> > Hombre</label><br>
-				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> > Mujer</label><br>
-				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> > Prefiero no decirlo</label><br>
+				<label><input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> required> Hombre</label><br>
+				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> required> Mujer</label><br>
+				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> required> Prefiero no decirlo</label><br>
 				<span class="errGender"></span>
 
 				<div class="containerAvatar">
@@ -124,101 +124,84 @@
 		window.addEventListener("load", doAll);
 
 
-	        function doAll(){
-	            var form = document.getElementById("formJS");
+        function doAll(){
+
+        var form = document.getElementById("formJS");
+
+        var name = form.name;
+        var surname = form.surname;
+        var username = form.username;
+        var email = form.email;
+        var pass = form.password;
+        var check = form.checkpassword;
+        var birth = form.birth_date;
+        var gender = form.gender;
+
+        function validate(){
+            var errors = {};
+
+            if (name.value === '') {
+                errors.errName = "El nombre es obligatorio";
+            }
+
+            if (surname.value === '') {
+                errors.errSurn = "El pellido es obligatorio";
+            }
+
+            if (username.value === '') {
+                errors.errUser = "Nombra a tu vikingo!";
+            }
+
+            if (email.value === '') {
+                errors.errEmail = "El mail es obligatorio";
+            }
+
+            if (pass.value === '') {
+                errors.errPass = "Olvidó poner su contraseña";
+            }
+
+            if (check.value === '') {
+                errors.errCheck = "Confirmar contraseña";
+            }
+
+            if (birth.value === '') {
+               errors.errBirth = "Debe completar su fecha de nacimiento";
+            }
+
+            if (gender.value.checked !== true) {
+                errors.errGender = "Debe seleccionar un género, aunque prefiera no aclararlo"
+            }
+            return errors;
+        }
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            console.log(e);
+
+            var errors = validate();
+
+            if(Object.keys(errors).length 	> 0){
+                for (var i = 0; i< errors.lenght; i++) {
+                    var span = document.querySelector("." + errors[i].name);
+                    span.innerText = errors[i];
+                }
+            }
+        }
+    })
 
 
-	            var name = form.name;
-	            var surname = form.surname;
-	            var username = form.username;
-	            var email = form.email;
-	            var pass = form.password;
-	            var check = form.checkpassword;
-	            var birth = form.birth_date;
-	            var genderM = form.genderM;
-	            var genderF = form.genderF;
-	            var genderO = form.genderO;
-
-
-	            button = document.getElementById("submit");
-
-
-
-
-	            function validate(){
-	                var errors = {};
-
-	                if (name.length == '') {
-	                    errors.errName = "El nombre es obligatorio";
-	                }           // property
-
-	                if (surname.value == '') {
-	                    errors.errSurn = "El pellido es obligatorio";
-	                }
-
-	                if (username.value == '') {
-	                    errors.errUser = "Nombra a tu vikingo!";
-	                }
-
-	                if (email.value == '') {
-	                    errors.errEmail = "El mail es obligatorio";
-	                }       // property
-
-	                if (pass.value == '') {
-	                    errors.errPass = "Olvidó poner su contraseña";
-	                }
-
-	                if (check.value == '') {
-	                    errors.errCheck = "Confirmar contraseña";
-	                }
-
-	                if (birth.value == '') {
-	                   errors.errBirth = "Debe completar su fecha de nacimiento";
-	                }               
-
-	                if (genderM.value.checked == true || genderF.value.checked == true || genderO.value.checked == true) {
-	                } else  {
-	                    errors.errGender = "Debe seleccionar un género (aunque prefiera no aclararlo)"
-	                }     // property
-
-	                return errors;
-
-	            }
-
-
-	            
-
-
-
-	  			form.addEventListener("submit", function(e){
-	  				e.preventDefault();
-	  				console.log(e);
-
-	  				var errores = validate();
-	  				
-	  	
-	  				if(Object.keys(errores).length 	> 0){
-	  					for(var property in errors){	//"." porque es class (como en css) busco la class
-	  						var span = document.querySelector("."+property);
-							span.innerText = errores[property];
-												//valor
-						}
-	  				}
-	  			});   
-	            
-
-	//              function isValid(){
-	//              var xmlhttp = new XMLHttpRequest();
-	//                  xmlhttp.onreadystatechange = function {
-	//                      if (this.readyState == 4 && this.status == 200) {
-	//                          document.querySelector("submit").innerHTML = JSON.parse(this.responseText);
-	//                      }
-	//
-	//              };
-	//              xmlhttp.open("POST", "controllers/register.controller.php", true);
-	//              xmlhttp.send();
-	//              }
-	        }
+//        function isValid(){
+//            var xmlhttp = new XMLHttpRequest();
+//              xmlhttp.onreadystatechange = function {
+//                  if (this.readyState == 4 && this.status == 200) {
+//                      document.querySelector("submit").innerHTML = JSON.parse(this.responseText);
+//                  }
+//
+//            };
+//        xmlhttp.open("POST", "controllers/register.controller.php", true);
+//        xmlhttp.send();
+//        }
+    }
 
 	</script>
 
