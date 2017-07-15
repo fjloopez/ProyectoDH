@@ -84,9 +84,9 @@
 				<label> Género</label>
 				<br>
 
-				<label><input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> required> Hombre</label><br>
-				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> required> Mujer</label><br>
-				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> required> Prefiero no decirlo</label><br>
+				<label><input type="radio" name="gender" value="male" <?php if ($gender == 'male'){ echo 'checked';} ?> > Hombre</label><br>
+				<label><input type="radio" name="gender" value="female" <?php if ($gender == 'female'){ echo 'checked';} ?> > Mujer</label><br>
+				<label><input type="radio" name="gender" value="other" <?php if ($gender == 'other'){ echo 'checked';} ?> > Prefiero no decirlo</label><br>
 				<span class="errGender"></span>
 
 				<div class="containerAvatar">
@@ -168,7 +168,7 @@
                errors.errBirth = "Debe completar su fecha de nacimiento";
             }
 
-            if (gender.value.checked !== true) {
+            if (gender.value === '') {
                 errors.errGender = "Debe seleccionar un género, aunque prefiera no aclararlo"
             }
             return errors;
@@ -185,22 +185,22 @@
                     var span = document.querySelector("." + errors[i].name);
                     span.innerText = errors[i];
                 }
+            }else{
+            	isValid();
             }
+        })
+
+
+        function isValid(){
+            var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                      document.querySelector(".buttonRegistro").innerHTML = JSON.parse(this.responseText);
+                  }
+            };
+        xmlhttp.open("POST", "controllers/register.controller.php", true);
+        xmlhttp.send();
         }
-    })
-
-
-//        function isValid(){
-//            var xmlhttp = new XMLHttpRequest();
-//              xmlhttp.onreadystatechange = function {
-//                  if (this.readyState == 4 && this.status == 200) {
-//                      document.querySelector("submit").innerHTML = JSON.parse(this.responseText);
-//                  }
-//
-//            };
-//        xmlhttp.open("POST", "controllers/register.controller.php", true);
-//        xmlhttp.send();
-//        }
     }
 
 	</script>
