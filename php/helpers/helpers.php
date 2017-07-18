@@ -38,11 +38,11 @@
 		=========================*/
 		$username = strtolower(trim($_POST['username']));
 		if ($username == "") {
-			$errors_register = "Te faltó ingresar tu nombre de usuario";
+			$errors_register[] = "Te faltó ingresar tu nombre de usuario";
 		} elseif (ctype_alnum(str_replace(' ', '', $username)) === false) {
-			$errors_register = "El nombre de usuario sólo puede contener letras y números" ;
+			$errors_register[] = "El nombre de usuario sólo puede contener letras y números" ;
 		} elseif (getUserByUsername($username) == !false) {
-			$errors_register = "El nombre de usuario ya está siendo usado";
+			$errors_register[] = "El nombre de usuario ya está siendo usado";
 		}elseif ((strlen($username) > 12)||(strlen($username) <4)) {
 			$errors_register[] = "El nombre de usuario debe tener entre 4 y 12 caracteres" ;
 		}
