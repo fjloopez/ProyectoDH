@@ -141,36 +141,37 @@
             var errors = {};
 
             if (name.value === '') {
-                errors.errName = "El nombre es obligatorio";
+                errors[errName] = "El nombre es obligatorio";
             }
 
             if (surname.value === '') {
-                errors.errSurn = "El pellido es obligatorio";
+                errors[errSurn] = "El pellido es obligatorio";
             }
 
             if (username.value === '') {
-                errors.errUser = "Nombra a tu vikingo!";
+                errors[errUser] = "Nombra a tu vikingo!";
             }
 
             if (email.value === '') {
-                errors.errEmail = "El mail es obligatorio";
+                errors[errEmail] = "El mail es obligatorio";
             }
 
             if (pass.value === '') {
-                errors.errPass = "Olvidó poner su contraseña";
+                errors[errPass] = "Olvidó poner su contraseña";
             }
 
             if (check.value === '') {
-                errors.errCheck = "Confirmar contraseña";
+                errors[errCheck] = "Confirmar contraseña";
             }
 
             if (birth.value === '') {
-               errors.errBirth = "Debe completar su fecha de nacimiento";
+               errors[errBirth] = "Debe completar su fecha de nacimiento";
             }
 
             if (gender.value === '') {
-                errors.errGender = "Debe seleccionar un género, aunque prefiera no aclararlo"
+                errors[errGender] = "Debe seleccionar un género, aunque prefiera no aclararlo"
             }
+            console.log(errors);
             return errors;
         }
 
@@ -185,21 +186,22 @@
                     var span = document.querySelector("." + errors[i].name);
                     span.innerText = errors[i];
                 }
-            }else{
+            } else{
             	isValid();
             }
-        })
-
-
+        });
         function isValid(){
             var xmlhttp = new XMLHttpRequest();
-              xmlhttp.onreadystatechange = function() {
-                  if (this.readyState == 4 && this.status == 200) {
+            var method = "POST";
+            var url = "controllers/register.controller.php";
+            xmlhttp.onreadystatechange = function () {
+                  if (this.readyState === 4 && this.status === 200) {
                       document.querySelector(".buttonRegistro").innerHTML = JSON.parse(this.responseText);
                   }
             };
-        xmlhttp.open("POST", "controllers/register.controller.php", true);
-        xmlhttp.send();
+            console.log(xmlhttp);
+            xmlhttp.open(method, url, true);
+            xmlhttp.send();
         }
     }
 
